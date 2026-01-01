@@ -24,7 +24,7 @@ body {
   background-color: var(--bg-black);
 }
 .container-big {
-  max-width: 1880px;
+  max-width: 1850px;
   padding: 0 15px;
   margin: auto;
   width: 100%;
