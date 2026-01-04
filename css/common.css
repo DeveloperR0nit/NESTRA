@@ -211,9 +211,27 @@ img {
 .header-animation {
   transform: translateY(-100%);
 }
-.large-no{
+.large-no {
   font-size: 192px;
   color: var(--secondary-color);
+}
+
+/* .swiper-button-next,
+.swiper-button-prev {
+   transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.swiper-button-next path,
+.swiper-button-prev path {
+   transition: opacity 0.3s ease, transform 0.3s ease;
+} */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: var(--secondary-color);
+  border: 1px solid var(--secondary-color) !important;
+}
+.swiper-button-next:hover path,
+.swiper-button-prev:hover path {
+  fill: var(--bg-black);
 }
 
 /*==============================
@@ -256,7 +274,7 @@ Header Top
 .header-top svg {
   margin-right: 10px;
 }
-.header-top div {
+.header-top .phone {
   margin-right: 20px;
 }
 .header-top .header-header-right-box {
@@ -626,10 +644,10 @@ Navbar Responsive
   .nav-link {
     margin: auto;
   }
-  .center-box {
+  .navbar .center-box {
     padding: 0 !important;
   }
-  .right-box {
+  .navbar .right-box {
     margin: 0 auto;
   }
   .nav-item::after {
