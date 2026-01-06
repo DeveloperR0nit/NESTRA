@@ -201,6 +201,9 @@ Banner Responsive
   .title-1 .visible-window {
     height: 32px;
     margin-top: 10px;
+    display: block;
+    margin: auto;
+    transform: translateY(5px);
   }
 }
 
@@ -353,7 +356,7 @@ Shop By Category Section Responsive
   .shop-by-category-sec .swiper-pagination {
     width: 100%;
   }
-  .shop-by-category-sec .title-desc {
+  .title-desc {
     font-size: 14px;
   }
   .shop-by-category-sec .title-2 {
@@ -615,6 +618,9 @@ Years Of Shaping Section Responsive
     height: 70px;
     margin-bottom: 6px;
   }
+  .years-of-shaping-sec .shaping-wrapper-2 .right-wrapper {
+    margin: 50px auto 0;
+  }
   .years-of-shaping-sec .shaping-wrapper-2 .sl-no {
     font-size: 50px;
   }
@@ -747,10 +753,7 @@ Our Story Section
 .our-story-sec .col-7-content {
   margin-left: 100px;
 }
-.our-story-sec .col-7-content .desc {
-  color: var(--text-gray);
-  font-size: 18px;
-  line-height: calc(28 / 18);
+.our-story-sec .col-7-content .title-desc {
   margin: 60px 0 36px;
 }
 .our-story-sec .linear-gradient-title {
@@ -843,6 +846,9 @@ Our Story Responsive
   .our-story-sec .row-1 {
     margin: 0 0 90px 0;
   }
+  .our-story-sec .col-12 {
+    padding: 0;
+  }
   .our-story-sec .col-6 {
     padding: 0;
   }
@@ -872,6 +878,9 @@ Our Story Responsive
     font-size: 14px;
     margin: 36px 0 40px;
   }
+  .our-story-sec .col-7-content .title-desc {
+    margin: 40px 0 24px;
+  }
   .our-story-sec .col-7-content {
     margin-left: 0;
   }
@@ -893,11 +902,15 @@ Our Story Responsive
   .our-story-sec .col-xl-7::after {
     display: none;
   }
+  .our-story-sec .row-1 {
+    margin: 0 0 70px 0;
+  }
 }
 
 /*==============================
 Featured Section
 ================================*/
+
 .featured-sec {
   padding: 60px 0;
 }
@@ -1056,9 +1069,6 @@ Featured Section Responsive
   .featured-sec {
     padding: 45px 0;
   }
-  .featured-sec .title-desc {
-    font-size: 14px;
-  }
   .featured-sec .swiper-slide {
     height: 490px;
   }
@@ -1082,6 +1092,7 @@ Featured Section Responsive
 /*==============================
 Welcome Section
 ================================*/
+
 .welcome-sec {
   padding: 60px 0;
   position: relative;
@@ -1186,9 +1197,6 @@ Welcome Section Responsive
     inset: 25px;
   }
   .welcome-sec .title-desc {
-    font-size: 14px;
-  }
-  .welcome-sec .title-desc {
     margin: 40px 0;
   }
 }
@@ -1267,6 +1275,7 @@ Discover Section
 /*==============================
 Discover Section Responsive
 ================================*/
+
 @media screen and (max-width: 992px) {
   .discover-sec .discover-title-wrapper {
     flex-direction: column;
@@ -1379,6 +1388,7 @@ Our Clients Section
 /*==============================
 Our Clients Responsive
 ================================*/
+
 @media screen and (max-width: 992px) {
   .our-clients-sec .swiper-row {
     gap: 0;
@@ -1423,6 +1433,7 @@ Our Clients Responsive
 /*==============================
 Latest News Section
 ================================*/
+
 .latest-news-sec {
   padding: 60px 0;
 }
@@ -1494,6 +1505,7 @@ Latest News Section
 /*==============================
 Latest News Responsive
 ================================*/
+
 @media screen and (max-width: 768px) {
   .latest-news-sec .latest-card {
     max-width: 400px;
@@ -1518,6 +1530,7 @@ Latest News Responsive
 /*==============================
 Latest News - Signup Wrapper
 ================================*/
+
 .latest-news-sign-up-wrapper {
   position: relative;
   overflow: hidden;

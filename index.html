@@ -58,14 +58,17 @@
             </div>
           </div>
           <div class="center-box position-absolute">
-            <ul class="scroll-text-list">
-              <li>100% verified properties, no hidden cost</li>
-              <li>Book now & save up to ₹1 Lakh!</li>
-              <li>Exclusive launch discount available!</li>
-              <li>RERA approved projects only</li>
-              <li>Direct from builders — no brokerage</li>
-              <li>Instant confirmation on every booking</li>
-            </ul>
+            <!-- Swiper -->
+            <div class="swiper header-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">100% verified properties, no hidden cost</div>
+                <div class="swiper-slide">Book now & save up to ₹1 Lakh!</div>
+                <div class="swiper-slide">Exclusive launch discount available!</div>
+                <div class="swiper-slide">RERA approved projects only</div>
+                <div class="swiper-slide">Direct from builders — no brokerage</div>
+                <div class="swiper-slide">Instant confirmation on every booking</div>
+              </div>
+            </div>
           </div>
           <div class="header-right-box ms-auto">
             <ul class="d-flex align-items-center">
@@ -176,66 +179,50 @@
                   <ul class="dropdown-menu">
                     <li>
                       <a class="dropdown-item" href="#"
-                        ><ul class="nav-link-hover">
-                          <li>luxury appartments</li>
-                          <li>luxury appartments</li>
-                        </ul></a
+                        ><div>luxury appartments</div>
+                        <div>luxury appartments</div></a
                       >
                     </li>
                     <li>
                       <a class="dropdown-item" href="#">
-                        <ul class="nav-link-hover">
-                          <li>villas & bungalows</li>
-                          <li>villas & bungalows</li>
-                        </ul>
+                        <div>villas & bungalows</div>
+                        <div>villas & bungalows</div>
                       </a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="#"
-                        ><ul class="nav-link-hover">
-                          <li>penthouse</li>
-                          <li>penthouse</li>
-                        </ul></a
+                        ><div>penthouse</div>
+                        <div>penthouse</div></a
                       >
                     </li>
                     <li>
                       <a class="dropdown-item" href="#"
-                        ><ul class="nav-link-hover">
-                          <li>waterfront appartments</li>
-                          <li>waterfront appartments</li>
-                        </ul></a
+                        ><div>waterfront appartments</div>
+                        <div>waterfront appartments</div></a
                       >
                     </li>
                     <li>
                       <a class="dropdown-item" href="#"
-                        ><ul class="nav-link-hover">
-                          <li>duplexes</li>
-                          <li>duplexes</li>
-                        </ul></a
+                        ><div>duplexes</div>
+                        <div>duplexes</div></a
                       >
                     </li>
                     <li>
                       <a class="dropdown-item" href="#"
-                        ><ul class="nav-link-hover">
-                          <li>ongoing projects</li>
-                          <li>ongoing projects</li>
-                        </ul></a
+                        ><div>ongoing projects</div>
+                        <div>ongoing projects</div></a
                       >
                     </li>
                     <li>
                       <a class="dropdown-item" href="#"
-                        ><ul class="nav-link-hover">
-                          <li>row houses</li>
-                          <li>row houses</li>
-                        </ul></a
+                        ><div>row houses</div>
+                        <div>row houses</div></a
                       >
                     </li>
                     <li>
                       <a class="dropdown-item" href="#"
-                        ><ul class="nav-link-hover">
-                          <li>smart homes</li>
-                          <li>smart homes</li>
-                        </ul></a
+                        ><div>smart homes</div>
+                        <div>smart homes</div></a
                       >
                     </li>
                   </ul>
@@ -710,7 +697,7 @@
               commitment to excellence.
             </h2>
             <div class="col-7-content">
-              <div class="desc">
+              <div class="title-desc">
                 At Nestra, we simplify the journey of finding your perfect home.
                 We connect buyers with trusted developers and verified
                 properties that fit every lifestyle and budget. With
@@ -2088,91 +2075,6 @@
       crossorigin="anonymous"
     ></script>
     <!-- Custom JS -->
-    <script>
-      const navbarToggler = document.querySelector(".navbar-toggler");
-      navbarToggler.addEventListener("click", () => {
-        navbarToggler.classList.toggle("open");
-      });
-      const dropdownItem = document.querySelector(".dropdown");
-      dropdownItem.addEventListener("click", () => {
-        dropdownItem.classList.toggle("move-up");
-      });
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        spaceBetween: 24,
-        freeMode: true,
-        slidesOffsetBefore: 30,
-        speed: 800,
-        pagination: {
-          el: ".swiper-pagination",
-          type: "progressbar",
-        },
-        breakpoints: {
-          576: {
-            slidesOffsetBefore: 50,
-          },
-        },
-      });
-      const header = document.querySelector("header");
-      window.addEventListener("scroll", () => {
-        const scrollTop = window.scrollY; // px scrolled from top
-        if (scrollTop > 100) {
-          header.classList.add("header-animation");
-        } else {
-          header.classList.remove("header-animation");
-        }
-      });
-      var swiper2 = new Swiper(".mySwiper2", {
-        slidesPerView: 1,
-        spaceBetween: 15,
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        breakpoints: {
-          976: {
-            slidesPerView: 3,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 24,
-          },
-          576: {
-            spaceBetween: 24,
-            slidesPerView: 2,
-          },
-        },
-      });
-      var swiper3 = new Swiper(".mySwiper3", {
-        slidesPerView: 1,
-        effect: "fade",
-        fadeEffect: {
-          crossFade: true,
-        },
-        loop: true,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        speed: 800,
-      });
-      const emailChecker = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-      const userFrom = document.querySelector(".sign-up-form");
-      const userEmail = document.querySelector("#email");
-      const invalidError = document.querySelector(".invalid-submit-error");
-      const submitDone = document.querySelector(".submit-done-msg");
-      userFrom.addEventListener("submit", (event) => {
-        event.preventDefault();
-        invalidError.classList.remove("show");
-        submitDone.classList.remove("show");
-        void submitDone.offsetWidth;
-        if (emailChecker.test(userEmail.value) == false) {
-          invalidError.classList.add("show");
-        } else {
-          submitDone.classList.add("show");
-        }
-      });
-    </script>
+    <script src="./js/home.js"></script>
   </body>
 </html>
