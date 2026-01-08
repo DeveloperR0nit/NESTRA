@@ -1,3 +1,38 @@
+// Loader
+
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader-wrapper");
+  setTimeout(() => {
+    loader.classList.add("hide");
+  }, 1100);
+});
+
+// Cursor
+
+const cursor = document.querySelector(".cursor");
+const navbar = document.querySelector("header");
+let pageX = 0;
+let pageY = 0;
+let cursorX = 0;
+let cursorY = 0;
+let newX = 0;
+let newY = 0;
+
+window.addEventListener("mousemove", (e) => {
+  pageX = e.clientX;
+  pageY = e.clientY;
+});
+
+function cursorMove() {
+  cursorX += (pageX - cursorX) / 18;
+  cursorY += (pageY - cursorY) / 18;
+  newX += (pageX - newX) / 6;
+  newY += (pageY - newY) / 6;
+  cursor.style.transform = `translate(${newX}px, ${newY}px) translate(-50%, -50%)`;
+  requestAnimationFrame(cursorMove);
+}
+cursorMove();
+
 // Header Top Sliding Text
 
 var headerSwiper = new Swiper(".header-swiper", {
@@ -38,16 +73,21 @@ observer.observe(dropdownMenu, {
 // Header Hinding Mechanism While Scroll
 
 const headerSearch = document.querySelector(".header-search-wrapper");
-window.addEventListener("scroll", () => {
-  const scrollTop = window.scrollY;
-  if (scrollTop > 100) {
+let lastScrollY = window.scrollY;
+window.addEventListener("scroll", (e) => {
+  let currentScrollY = window.scrollY;
+  // scrolling up
+  if (currentScrollY < lastScrollY) {
+    headerSearch.classList.remove("header-animation");
+  }
+  // scrolling down
+  else {
     headerSearch.classList.add("header-animation");
     dropdownMenu.classList.remove("show");
     dropdownItem.classList.remove("move-up");
     dropdownToggle.classList.remove("show");
-  } else {
-    headerSearch.classList.remove("header-animation");
   }
+  lastScrollY = currentScrollY;
 });
 
 // Search box popup animation
