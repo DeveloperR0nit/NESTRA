@@ -147,7 +147,7 @@ Banner Responsive
 }
 @media screen and (max-width: 576px) {
   .banner-sec {
-    padding: 300px 0 45px;
+    padding: 350px 0 45px;
   }
   .banner-subtitle {
     margin: 25px auto 30px;
@@ -1580,6 +1580,7 @@ Signup Section
 .sign-up-sec .sign-up-form {
   display: flex;
   position: relative;
+  flex-wrap: wrap;
 }
 .sign-up-sec .sign-up-form::after {
   content: "";
@@ -1591,7 +1592,8 @@ Signup Section
   background: var(--text-gray);
 }
 .sign-up-sec #email,
-.sign-up-sec button {
+.sign-up-sec .submit-btn,
+.sign-up-sec .reset-btn {
   background: transparent;
   outline: none;
   border: none;
@@ -1605,7 +1607,7 @@ Signup Section
   color: var(--primary-color);
   font-size: 15px;
 }
-.sign-up-sec button {
+.sign-up-sec .submit-btn {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1615,14 +1617,52 @@ Signup Section
   font-size: 15px;
   transition: 0.4s ease;
 }
-.sign-up-sec button:hover {
+.sign-up-sec .submit-btn:hover {
   color: var(--secondary-color);
 }
-.sign-up-sec button path {
+.sign-up-sec .submit-btn path {
   transition: 0.4s ease;
 }
-.sign-up-sec button:hover path {
+.sign-up-sec .submit-btn:hover path {
   fill: var(--secondary-color);
+}
+.sign-up-sec .reset-btn{
+ opacity: 0;
+  color: var(--primary-color);
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  align-self: center;
+  transition: 0.5s ease;
+  cursor: default;
+}
+.sign-up-sec .reset-btn:hover{
+  background: rgba(255,255,255,0.4);
+}
+.sign-up-sec .reset-bar{
+  display: block;
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 1px;
+  transition: 0.3s ease;
+}
+.sign-up-sec .reset-bar.bar-1{
+  transform: translateY(19px);
+  transition: 1s ease;
+}
+.sign-up-sec .reset-bar.bar-2{
+  transform: translateY(19px);
+  transition: 1s ease;
+}
+.sign-up-sec .reset-btn.show{
+  opacity: 1;
+  cursor: pointer;
+}
+.sign-up-sec .reset-btn.show > .reset-bar.bar-1{
+  transform: rotate(45deg) translateY(0);
+}
+.sign-up-sec .reset-btn.show > .reset-bar.bar-2{
+  transform: rotate(-45deg) translateY(0);
 }
 .sign-up-sec .invalid-submit-error {
   opacity: 0;
@@ -1638,8 +1678,7 @@ Signup Section
   transform: translateY(6px);
 }
 .sign-up-sec .invalid-submit-error.show {
-  opacity: 1;
-  transform: translateY(0);
+  animation: fadeInOut 4s ease;
 }
 .sign-up-sec .submit-done-msg {
   opacity: 0;
@@ -1671,12 +1710,12 @@ Signup Section
   }
   100% {
     opacity: 0;
-    transform: translateY(-6px);
+    transform: translateY(6px);
   }
 }
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus {
+.sign-up-sec input:-webkit-autofill,
+.sign-up-sec input:-webkit-autofill:hover,
+.sign-up-sec input:-webkit-autofill:focus {
   -webkit-text-fill-color: #fff;
   box-shadow: 0 0 0px 1000px var(--bg-black) inset;
   transition: background-color 5000s ease-in-out 0s;
@@ -1690,16 +1729,23 @@ Sign Up Section Responsive
   .sign-up-sec {
     padding: 45px 0 90px;
   }
-  .sign-up-sec .sign-up-form {
-    flex-direction: column;
-    gap: 10px;
+  .sign-up-sec .sign-up-form{
+    justify-content: end;
+  }
+  .sign-up-sec #email{
+    width: 80%;
   }
   .sign-up-sec .sign-up-form::after {
     bottom: 47%;
   }
-  .sign-up-sec button {
-    justify-content: end;
-  }
+  .sign-up-sec .reset-bar.bar-1{
+  transform: translateY(13px);
+  transition: 1s ease;
+}
+.sign-up-sec .reset-bar.bar-2{
+  transform: translateY(13px);
+  transition: 1s ease;
+}
   .sign-up-sec .invalid-submit-error,
   .sign-up-sec .submit-done-msg {
     bottom: 0px;

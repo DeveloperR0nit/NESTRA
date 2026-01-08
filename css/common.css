@@ -209,9 +209,6 @@ img {
   color: var(--text-gray);
   line-height: calc(28 / 18);
 }
-.header-animation {
-  transform: translateY(-100%);
-}
 .large-no {
   font-size: 192px;
   color: var(--secondary-color);
@@ -227,22 +224,51 @@ img {
 }
 
 /*==============================
-Header & Banner
+Header-Search Wrapper
 ================================*/
-
-/*==============================
-Header
-================================*/
-header {
+.header-search-wrapper {
   background: transparent;
   position: fixed;
   left: 0;
   top: 0;
   right: 0;
   z-index: 3;
-  backdrop-filter: blur(20px);
   transform: translateY(0);
+  height: 140px;
   transition: 0.3s ease all;
+}
+.header-animation {
+  transform: translateY(-100%);
+}
+.header-search-wrapper.height-increase {
+  height: fit-content;
+}
+
+/*==============================
+Header-Search Wrapper Responsive
+================================*/
+
+@media screen and (max-width: 1200px) {
+  .header-search-wrapper {
+    height: 124px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header-search-wrapper {
+    height: 110px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header-search-wrapper {
+    height: 90px;
+  }
+}
+
+/*==============================
+Header
+================================*/
+header {
+  backdrop-filter: blur(20px);
 }
 
 /*==============================
@@ -307,7 +333,6 @@ Header Top
 /*==============================
 Header Top Responsive
 ================================*/
-
 
 @media screen and (max-width: 1200px) {
   .header-top .left-box {
@@ -377,7 +402,7 @@ nav .right-box,
 nav .left-box {
   width: 240px;
 }
-nav .right-box div::after {
+nav .right-box .icon-box::after {
   content: "";
   position: absolute;
   top: 0;
@@ -450,7 +475,7 @@ nav .icon-box {
   padding: 5px;
   overflow-y: hidden;
 }
-nav .icon-box > a {
+nav .icon-box > div {
   height: 100%;
   width: 100%;
   display: flex;
@@ -578,14 +603,181 @@ nav .dropdown-toggle svg > path {
   opacity: 1;
   width: 100%;
 }
-.nav-link-hover{
+.nav-link-hover {
   transform: translate(0);
+}
+.navbar .search-box {
+  background: transparent;
+  border: none;
+}
+.navbar .search-box.show > .icon-box-hover {
+  transform: translateY(0);
+}
+.navbar .search-box.show > .icon-box-hover svg {
+  transform: scale(1);
+}
+
+/*==============================
+Search Box Popup
+================================*/
+
+.search-box-popup {
+  padding: 80px 0 95px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: 1s ease;
+  transform: translateY(calc(100vh - 140px));
+  overflow: hidden;
+  backdrop-filter: blur(20px);
+  opacity: 0;
+  position: relative;
+  z-index: -1;
+}
+.search-box-popup.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+.search-box-popup .search-form {
+  display: flex;
+  position: relative;
+}
+.search-box-popup .search-form:after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--text-gray);
+}
+.search-box-popup #search-inp {
+  background: transparent;
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  color: var(--primary-color) !important;
+  font-size: 24px;
+}
+
+.search-box-popup #search-inp::-webkit-search-cancel-button {
+  display: none;
+}
+.search-box-popup #search-inp::placeholder {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s linear;
+}
+.search-box-popup #search-inp:focus::placeholder {
+  color: var(--primary-color);
+}
+.search-box-popup .search-submit-btn {
+  background: transparent;
+  border: none;
+}
+.search-box-popup input:-webkit-autofill,
+.search-box-popup input:-webkit-autofill:hover,
+.search-box-popup input:-webkit-autofill:focus,
+.search-box-popup textarea:-webkit-autofill {
+  -webkit-text-fill-color: var(--primary-color);
+  box-shadow: 0 0 0px 1000px transparent inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.search-box-popup .reset-btn {
+  background: transparent;
+  outline: none;
+  border: none;
+  opacity: 0;
+  color: var(--primary-color);
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  align-self: center;
+  transition: 0.5s ease;
+  cursor: default;
+}
+.search-box-popup .reset-btn:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+.search-box-popup .reset-bar {
+  display: block;
+  width: 100%;
+  background-color: var(--primary-color);
+  height: 1px;
+  transition: 0.3s ease;
+}
+.search-box-popup .reset-btn.show {
+  opacity: 1;
+  cursor: pointer;
+}
+.search-box-popup .reset-btn.show > .reset-bar.bar-1 {
+  transform: rotate(45deg) translateY(0);
+}
+.search-box-popup .reset-btn.show > .reset-bar.bar-2 {
+  transform: rotate(-45deg) translateY(0);
+}
+.search-box-popup .reset-bar.bar-1 {
+  transform: translateY(34px);
+  transition: 1s ease;
+}
+.search-box-popup .reset-bar.bar-2 {
+  transform: translateY(34px);
+  transition: 1s ease;
+}
+
+/*==============================
+Search Box Popup Responsive
+================================*/
+
+@media screen and (max-width: 992px) {
+  .search-box-popup {
+    padding: 60px 0 65px;
+    transform: translateY(calc(100vh - 124px));
+  }
+  .search-box-popup #search-inp {
+    font-size: 22px;
+  }
+  .search-box-popup .search-form:after {
+    bottom: -5px;
+  }
+  .search-box-popup #search-inp::placeholder {
+    font-size: 22px;
+  }
+  .search-box-popup .reset-bar.bar-1 {
+    transform: translateY(22px);
+  }
+  .search-box-popup .reset-bar.bar-2 {
+    transform: translateY(22px);
+  }
+}
+@media screen and (max-width: 768px) {
+  .search-box-popup {
+    transform: translateY(calc(100vh - 110px));
+  }
+}
+@media screen and (max-width: 576px) {
+  .search-box-popup {
+    padding: 40px 0 45px;
+    transform: translateY(calc(100vh - 90px));
+  }
+  .search-box-popup #search-inp {
+    font-size: 18px;
+  }
+  .search-box-popup #search-inp::placeholder {
+    font-size: 16px;
+  }
+  .search-box-popup .search-submit-btn > svg {
+    padding: 0;
+  }
+  .search-box-popup .reset-bar.bar-1 {
+    transform: translateY(20px);
+  }
+  .search-box-popup .reset-bar.bar-2 {
+    transform: translateY(20px);
+  }
 }
 
 /*==============================
 Navbar Responsive
 ================================*/
-
 
 @media screen and (max-width: 992px) {
   nav .right-box,
