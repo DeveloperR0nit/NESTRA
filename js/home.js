@@ -7,6 +7,20 @@ window.addEventListener("load", function () {
   }, 1100);
 });
 
+// Luxy
+
+function initLuxy() {
+  if (window.innerWidth > 992) {
+    luxy.init({
+      wrapper: "#luxy",
+      targets: ".luxy-el",
+      wrapperSpeed: 0.08
+    });
+  }
+}
+
+window.addEventListener("load", initLuxy);
+
 // Cursor
 
 const cursor = document.querySelector(".cursor");
