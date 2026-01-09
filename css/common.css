@@ -28,6 +28,10 @@ body {
   background-color: var(--bg-black);
   overflow-x: hidden;
 }
+body.no-scroll {
+  position: fixed;
+  width: 100%;
+}
 .container-big {
   max-width: 1850px;
   padding: 0 15px;

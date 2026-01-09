@@ -14,7 +14,7 @@ function initLuxy() {
     luxy.init({
       wrapper: "#luxy",
       targets: ".luxy-el",
-      wrapperSpeed: 0.08
+      wrapperSpeed: 0.08,
     });
   }
 }
@@ -136,6 +136,23 @@ searchInput.addEventListener("input", () => {
 });
 reset1.addEventListener("click", () => {
   reset1.classList.remove("show");
+});
+
+// Scroll disable while navbar toggler is open
+
+let scrollPosition = 0;
+const navBar = document.querySelector(".offcanvas");
+
+navBar.addEventListener("shown.bs.offcanvas", () => {
+  scrollPosition = window.scrollY;
+  document.body.style.top = `-${scrollPosition}px`;
+  document.body.classList.add("no-scroll");
+});
+
+navbar.addEventListener("hidden.bs.offcanvas", () => {
+  document.body.classList.remove("no-scroll");
+  document.body.style.top = "";
+  window.scrollTo(0, scrollPosition);
 });
 
 // Shop By Category Slider
