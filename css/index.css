@@ -1923,7 +1923,7 @@ Footer Section
   color: var(--primary-color);
 }
 .footer-ending-text > a {
-  transition: 0.4s ease;
+  transition: 0.6s ease;
   color: var(--primary-color);
 }
 .footer-ending-text > a:hover {

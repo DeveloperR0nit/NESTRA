@@ -184,6 +184,10 @@ var swiper2 = new Swiper(".mySwiper2", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: true,
+  },
   breakpoints: {
     976: {
       slidesPerView: 3,
