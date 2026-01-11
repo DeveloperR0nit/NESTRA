@@ -1,0 +1,441 @@
+/*==============================
+Banner Section
+================================*/
+
+.banner-sec {
+  min-height: 100vh;
+  background: url("../assets/about-us/banner-bg-img.png") no-repeat center/cover;
+  padding: 350px 0 100px;
+}
+.banner-sec .title-1 {
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+.banner-sec .navigation {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.banner-sec .navigation li {
+  color: var(--secondary-color);
+  text-transform: capitalize;
+  font-size: 20px;
+  position: relative;
+}
+.banner-sec .navigation li::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: var(--secondary-color);
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner-sec .navigation li:first-child:before {
+  display: none;
+}
+.banner-sec .navigation a {
+  color: var(--primary-color);
+  transition: 0.6s ease;
+}
+.banner-sec .navigation a:hover {
+  color: var(--secondary-color);
+}
+
+/*==============================
+Banner Responsive
+================================*/
+@media screen and (max-width: 768px) {
+  .banner-sec .title-1 {
+    margin-bottom: 30px;
+  }
+  .banner-sec .navigation li {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .banner-sec .title-1 {
+    margin-bottom: 25px;
+  }
+}
+
+/*==============================
+Welcome Section
+================================*/
+
+.welcome-sec {
+  padding: 60px 0;
+  position: relative;
+}
+.welcome-sec::before {
+  content: "";
+  background: url("../assets/common/section-after.png") no-repeat center/cover;
+  height: 63px;
+  width: 163px;
+  position: absolute;
+  top: 131px;
+  left: 0;
+  z-index: -1;
+}
+.welcome-sec::after {
+  content: "";
+  background: url("../assets/common/section-after.png") no-repeat center/cover;
+  height: 63px;
+  width: 163px;
+  position: absolute;
+  top: 50%;
+  right: -81px;
+  z-index: -1;
+}
+.welcome-sec .welcome-left-img {
+  height: 847px;
+  border-radius: 208.333vw 208.333vw 0 0;
+}
+.welcome-sec .welcome-left-img > img {
+  border-radius: 208.333vw 208.333vw 0 0;
+}
+.welcome-sec .welcome-content {
+  text-align: end;
+  max-width: 600px;
+  margin-bottom: 50px;
+}
+.welcome-sec .subtitle {
+  justify-content: end;
+  flex-direction: row-reverse;
+}
+.welcome-sec .subtitle > .subtitle-box {
+  margin-left: 10px;
+}
+.welcome-sec .title-2 {
+  margin-bottom: 30px;
+}
+.welcome-sec .title-desc {
+  margin-bottom: 50px;
+}
+.welcome-sec .primary-btn {
+  margin-left: auto;
+}
+.welcome-swiper-wrapper {
+  width: 400px;
+  margin-left: auto;
+}
+.welcome-sec .swiper-slide {
+  height: 400px;
+}
+.welcome-sec .swiper-slide > img {
+  border-radius: 50%;
+}
+
+/*==============================
+Welcome Section Responsive
+================================*/
+
+@media screen and (max-width: 992px) {
+  .welcome-swiper-wrapper {
+    width: 350px;
+  }
+  .welcome-sec .swiper-slide {
+    height: 350px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .welcome-sec::before {
+    display: none;
+  }
+  .welcome-sec::after {
+    height: 46px;
+    width: 120px;
+    right: -30px;
+  }
+  .welcome-sec .welcome-content {
+    text-align: start;
+  }
+  .welcome-sec .subtitle {
+    justify-content: start;
+    flex-direction: row;
+  }
+  .welcome-sec .subtitle > .subtitle-box {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+  .welcome-sec .primary-btn {
+    margin-left: 0;
+  }
+  .welcome-sec .welcome-swiper-wrapper {
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 576px) {
+  .welcome-sec {
+    padding: 45px 0;
+  }
+  .welcome-swiper-wrapper {
+    width: 250px;
+  }
+  .welcome-sec .swiper-slide {
+    height: 250px;
+  }
+}
+
+/*==============================
+Design Section
+================================*/
+
+.design-sec {
+  padding: 60px 0;
+  position: relative;
+}
+.design-sec::before {
+  content: "";
+  background: url("../assets/common/section-after.png") no-repeat center/cover;
+  height: 63px;
+  width: 163px;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  z-index: -1;
+}
+.design-sec::after {
+  content: "";
+  background: url("../assets/common/section-after.png") no-repeat center/cover;
+  height: 63px;
+  width: 163px;
+  position: absolute;
+  top: 70%;
+  right: -45px;
+  z-index: -1;
+}
+.design-sec .title-2 {
+  margin-bottom: 70px;
+  max-width: 520px;
+}
+.design-sec .primary-btn {
+  margin-bottom: 110px;
+}
+.design-sec .col-4-img {
+  margin-bottom: 50px;
+}
+
+/*==============================
+Design Section Responsive
+================================*/
+
+@media screen and (max-width: 768px) {
+  .design-sec::before,
+  .design-sec::after {
+    height: 46px;
+    width: 120px;
+  }
+  .design-sec .col-4-img {
+    width: 300px;
+  }
+  .design-sec .title-2 {
+    margin-bottom: 60px;
+  }
+  .design-sec .primary-btn {
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .design-sec {
+    padding: 45px 0;
+  }
+  .design-sec::before,
+  .design-sec::after {
+    height: 29px;
+    width: 75px;
+  }
+  .design-sec {
+    padding: 45px 0;
+  }
+  .design-sec .primary-btn {
+    margin-bottom: 60px;
+  }
+  .design-sec .title-2 {
+    margin-bottom: 40px;
+  }
+  .design-sec .col-8-img-card {
+    max-width: 250px;
+    margin: auto;
+  }
+}
+
+/*==============================
+Welcome-Design Wrapper
+================================*/
+
+.welcome-design-wrapper::before {
+  content: "";
+  background: url("../assets/about-us/welcome-design-wrapper-before-element.png")
+    no-repeat center/cover;
+  position: absolute;
+  left: 0;
+  top: 49%;
+  height: 180px;
+  width: 242px;
+}
+
+/*==============================
+Welcome-Design Wrapper Responsive
+================================*/
+
+@media screen and (max-width: 768px) {
+  .welcome-design-wrapper::before {
+    height: 130px;
+    width: 180px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .welcome-design-wrapper::before {
+    top: 42%;
+    height: 95px;
+    width: 130px;
+  }
+}
+
+/*==============================
+Inspired Section
+================================*/
+
+.inspired-sec {
+  padding: 60px 0;
+}
+.inspired-sec .subtitle {
+  flex-direction: column;
+}
+.inspired-sec .subtitle-box {
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+.inspired-sec .title-2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.inspired-sec .person-name {
+  color: var(--primary-color);
+  font-size: 25px;
+  text-align: center;
+  margin: 25px 0 5px;
+  text-transform: capitalize;
+}
+.inspired-sec .person-post {
+  font-size: 16px;
+  color: var(--secondary-color);
+  font-family: var(--aeonik-bold), sans-serif;
+  text-align: center;
+  margin-bottom: 0;
+  text-transform: capitalize;
+}
+
+/*==============================
+Inspired Section Responsive
+================================*/
+
+@media screen and (max-width: 768px) {
+  .inspired-sec .person-name {
+    font-size: 22px;
+  }
+  .inspired-sec .person-post {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .inspired-sec {
+    padding: 45px 0;
+  }
+  .inspired-sec .title-2 {
+    margin-bottom: 50px;
+  }
+  .inspired-sec .card-img {
+    max-width: 175px;
+    margin: auto;
+  }
+  .inspired-sec .person-name {
+    font-size: 18px;
+    margin: 15px 0 0px;
+  }
+  .inspired-sec .person-post {
+    font-size: 12px;
+  }
+}
+
+/*==============================
+Image Section
+================================*/
+
+.image-sec {
+  height: 650px;
+  position: relative;
+  overflow: hidden;
+}
+.image-sec .image-wrapper{
+    height: 110%;
+    width: 110%;
+    left: -5% !important;
+}
+.image-sec::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    var(--bg-black),
+    rgba(20, 18, 11, 0.8),
+    rgba(20, 18, 11, 0.5),
+    transparent,
+    rgba(20, 18, 11, 0.5),
+    rgba(20, 18, 11, 0.8),
+    var(--bg-black)
+  );
+}
+
+/*==============================
+Image Section Responsive
+================================*/
+
+@media screen and (max-width: 768px) {
+  .image-sec {
+    height: 550px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .image-sec {
+    height: 400px;
+  }
+}
+
+/*==============================
+Our Clients Section
+================================*/
+
+.our-clients-sec::before {
+  content: "";
+  position: absolute;
+  top: 56px;
+  left: -145px;
+  background: url("../assets/common/rotating-design.png") no-repeat center/cover;
+  width: 384px;
+  height: 384px;
+  animation: rotate-360deg-20sec 20s linear infinite;
+}
+
+/*==============================
+Our Clients Section Responsive
+================================*/
+
+@media screen and (max-width: 1200px) {
+  .our-clients-sec::before {
+    left: -100px;
+    width: 250px;
+    height: 250px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .our-clients-sec::before {
+    left: -80px;
+    width: 180px;
+    height: 180px;
+  }
+}
