@@ -3,9 +3,9 @@ Banner Section
 ================================*/
 
 .banner-sec {
-  min-height: 87vh;
+  min-height: 70vh;
   background: url("../assets/about-us/banner-bg-img.png") no-repeat center/cover;
-  padding-top: 350px;
+  padding-top: 300px;
 }
 .banner-sec .title-1 {
   text-align: center;
