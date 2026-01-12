@@ -356,7 +356,6 @@ Loader
 Common Animations
 ================================*/
 
-
 /* Loading Animations */
 
 @keyframes ball624 {
@@ -676,7 +675,6 @@ Common Animations
   }
 }
 
-
 /*==============================
 Header-Search Wrapper
 ================================*/
@@ -692,8 +690,11 @@ Header-Search Wrapper
   transition: 0.5s ease all;
   z-index: 999;
 }
-.header-animation {
+.header-hide {
   transform: translateY(-100%);
+}
+.header-bottom-show {
+  transform: translateY(-59px);
 }
 .header-search-wrapper.height-increase {
   height: fit-content;
@@ -707,10 +708,21 @@ Header-Search Wrapper Responsive
   .header-search-wrapper {
     height: 124px;
   }
+  .header-bottom-show {
+    transform: translateY(-43px);
+  }
+}
+@media screen and (max-width: 992px) {
+  .header-bottom-show {
+    transform: translateY(-46px);
+  }
 }
 @media screen and (max-width: 768px) {
   .header-search-wrapper {
     height: 110px;
+  }
+  .header-bottom-show {
+    transform: translateY(-29px);
   }
 }
 @media screen and (max-width: 576px) {

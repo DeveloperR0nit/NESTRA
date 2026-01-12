@@ -96,17 +96,35 @@ const headerSearch = document.querySelector(".header-search-wrapper");
 let lastScrollY = window.scrollY;
 window.addEventListener("scroll", (e) => {
   let currentScrollY = window.scrollY;
-  // scrolling up
-  if (currentScrollY < lastScrollY) {
-    headerSearch.classList.remove("header-animation");
-  }
-  // scrolling down
-  else {
-    headerSearch.classList.add("header-animation");
-    dropdownMenu.classList.remove("show");
-    dropdownItem.classList.remove("move-up");
-    dropdownToggle.classList.remove("show");
-  }
+  if (lastScrollY > 100) {
+    // scrolling up
+    if (currentScrollY < lastScrollY) {
+      headerSearch.classList.add("header-bottom-show");
+      headerSearch.classList.remove("header-hide");
+    }
+    // scrolling down
+    else {
+      headerSearch.classList.add("header-hide");
+      headerSearch.classList.remove("header-bottom-show");
+      dropdownMenu.classList.remove("show");
+      dropdownItem.classList.remove("move-up");
+      dropdownToggle.classList.remove("show");
+    }
+  } else {
+    // scrolling up
+    if (currentScrollY < lastScrollY) {
+      headerSearch.classList.remove("header-hide");
+      headerSearch.classList.remove("header-bottom-show");
+    }
+    // scrolling down
+    else {
+      headerSearch.classList.add("header-hide");
+      dropdownMenu.classList.remove("show");
+      dropdownItem.classList.remove("move-up");
+      dropdownToggle.classList.remove("show");
+    }
+  };
+
   lastScrollY = currentScrollY;
 });
 
@@ -160,7 +178,6 @@ searchInput.addEventListener("input", () => {
 reset1.addEventListener("click", () => {
   reset1.classList.remove("show");
 });
-
 
 // Our Clients Slider
 
