@@ -21,12 +21,17 @@ Commmon Tags
 
 html {
   overflow-x: hidden;
+  cursor: none;
 }
 
 body {
   font-family: var(--aeonik-regular);
   background-color: var(--bg-black);
   overflow-x: hidden;
+  cursor: none;
+}
+*:hover {
+  cursor: none !important;
 }
 body.no-scroll {
   position: fixed;
@@ -248,21 +253,69 @@ Common tags resonsive
 /*==============================
 Cursor
 ================================*/
+
+html,
+body,
+a,
+button,
+input,
+textarea,
+select,
+label,
+*:focus {
+  cursor: none !important;
+}
+
 .cursor {
   position: fixed;
   top: 0;
   left: 0;
-  height: 20px;
-  width: 20px;
-  background: rgba(255, 255, 255, 0.6);
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 5px var(--secondary-color);
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
+  z-index: 99999;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  z-index: 99;
-  /* backdrop-filter: invert(1); */
+}
+
+.cursor-border {
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 5px var(--primary-color);
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  z-index: 9999;
+}
+
+.cursor-border {
+  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+}
+.cursor {
+  transition: background-color 0.2s ease, mix-blend-mode 0.2s ease;
+}
+
+.cursor.hover {
+  background-color: var(--primary-color);
+  mix-blend-mode: difference;
+}
+
+.cursor-border.hover {
+  width: 20px;
+  height: 20px;
+  border-color: red;
 }
 
 @media screen and (max-width: 992px) {
+  .cursor-border {
+    display: none;
+  }
   .cursor {
     display: none;
   }
@@ -734,9 +787,7 @@ Header-Search Wrapper Responsive
 /*==============================
 Header
 ================================*/
-header {
-  backdrop-filter: blur(20px);
-}
+
 
 /*==============================
 Header Top
@@ -746,6 +797,7 @@ Header Top
   padding: 10px 0;
   font-family: var(--aeonik-regular);
   font-size: 16px;
+  backdrop-filter: blur(20px);
 }
 .header-top::after {
   content: "";
@@ -841,6 +893,7 @@ Navbar
   background-color: transparent !important;
   height: 80px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(20px);
 }
 nav::after {
   content: "";
@@ -904,6 +957,16 @@ nav .right-box .icon-box::after {
 .active {
   color: var(--secondary-color) !important;
 }
+.dropdown-active > .dropdown-item{
+  color: var(--secondary-color) !important;
+}
+.dropdown-active::before{
+  display: none;
+}
+.dropdown-active::after{
+  opacity: 1 !important;
+  width: 100% !important;
+}
 .nav-item:has(.active)::after {
   opacity: 1;
   width: 100%;
@@ -956,12 +1019,15 @@ nav .icon-box > div {
 nav .dropdown-toggle::after {
   display: none;
 }
+nav .dropdown-toggle:focus {
+  color: var(--secondary-color) !important;
+}
 nav .dropdown-toggle svg {
   margin-left: 5px;
   transform: translateY(3px);
 }
 nav .dropdown-toggle svg > path {
-  transition: 1s linear;
+  transition: 0.5s linear;
 }
 .nav-item:hover svg > path {
   fill: var(--secondary-color);
@@ -1443,6 +1509,60 @@ Search Box Popup Responsive
     transform: translateY(20px);
   }
 }
+
+
+/*==============================
+Banner Section
+================================*/
+
+.banner-sec{
+  min-height: 100vh;
+  padding-top: 350px;
+}
+.banner-sec .navigation {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.banner-sec .navigation li {
+  color: var(--secondary-color);
+  text-transform: capitalize;
+  font-size: 20px;
+  position: relative;
+}
+.banner-sec .navigation li::before {
+  content: "";
+  height: 10px;
+  width: 10px;
+  background: var(--secondary-color);
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner-sec .navigation li:first-child:before {
+  display: none;
+}
+.banner-sec .navigation button{
+  background: transparent;
+  border: none;
+  color: var(--secondary-color);
+  text-transform: capitalize;
+}
+.banner-sec .navigation a {
+  color: var(--primary-color);
+  transition: 0.6s ease;
+}
+.banner-sec .navigation a:hover {
+  color: var(--secondary-color);
+}
+
+@media screen and (max-width: 768px) {
+  .banner-sec .navigation li {
+    font-size: 18px;
+  }
+}
+
 
 /*==============================
 Scroll text Section

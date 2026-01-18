@@ -3,56 +3,22 @@ Banner Section
 ================================*/
 
 .banner-sec {
-  min-height: 100vh;
   background: url("../assets/about-us/banner-bg-img.png") no-repeat center/cover;
-  padding-top: 350px;
 }
 .banner-sec .title-1 {
   text-align: center;
   text-transform: capitalize;
   margin-bottom: 40px;
 }
-.banner-sec .navigation {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-}
-.banner-sec .navigation li {
-  color: var(--secondary-color);
-  text-transform: capitalize;
-  font-size: 20px;
-  position: relative;
-}
-.banner-sec .navigation li::before {
-  content: "";
-  height: 10px;
-  width: 10px;
-  background: var(--secondary-color);
-  position: absolute;
-  left: -20px;
-  top: 50%;
-  transform: translate(-50%, -50%);
-}
-.banner-sec .navigation li:first-child:before {
-  display: none;
-}
-.banner-sec .navigation a {
-  color: var(--primary-color);
-  transition: 0.6s ease;
-}
-.banner-sec .navigation a:hover {
-  color: var(--secondary-color);
-}
 
 /*==============================
 Banner Responsive
 ================================*/
+
+
 @media screen and (max-width: 768px) {
   .banner-sec .title-1 {
     margin-bottom: 30px;
-  }
-  .banner-sec .navigation li {
-    font-size: 18px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -370,10 +336,10 @@ Image Section
   position: relative;
   overflow: hidden;
 }
-.image-sec .image-wrapper{
-    height: 110%;
-    width: 110%;
-    left: -5% !important;
+.image-sec .image-wrapper {
+  height: 110%;
+  width: 110%;
+  left: -5% !important;
 }
 .image-sec::after {
   content: "";

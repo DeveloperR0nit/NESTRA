@@ -30,6 +30,7 @@ window.addEventListener("load", initLuxy);
 // Cursor
 
 const cursor = document.querySelector(".cursor");
+const cursorBorder = document.querySelector(".cursor-border");
 const navbar = document.querySelector("header");
 let pageX = 0;
 let pageY = 0;
@@ -44,14 +45,31 @@ window.addEventListener("mousemove", (e) => {
 });
 
 function cursorMove() {
-  cursorX += (pageX - cursorX) / 18;
-  cursorY += (pageY - cursorY) / 18;
-  newX += (pageX - newX) / 6;
-  newY += (pageY - newY) / 6;
+  cursorX += (pageX - cursorX) / 8;
+  cursorY += (pageY - cursorY) / 8;
+  newX += (pageX - newX) / 3;
+  newY += (pageY - newY) / 3;
   cursor.style.transform = `translate(${newX}px, ${newY}px) translate(-50%, -50%)`;
+  cursorBorder.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`;
   requestAnimationFrame(cursorMove);
 }
 cursorMove();
+
+const hoverTargets = document.querySelectorAll(
+  "a, button, .hover-target"
+);
+
+hoverTargets.forEach((el) => {
+  el.addEventListener("mouseenter", () => {
+    cursor.classList.add("hover");
+    cursorBorder.classList.add("hover");
+  });
+
+  el.addEventListener("mouseleave", () => {
+    cursor.classList.remove("hover");
+    cursorBorder.classList.remove("hover");
+  });
+});
 
 // Header Top Sliding Text
 
@@ -123,7 +141,7 @@ window.addEventListener("scroll", (e) => {
       dropdownItem.classList.remove("move-up");
       dropdownToggle.classList.remove("show");
     }
-  };
+  }
 
   lastScrollY = currentScrollY;
 });

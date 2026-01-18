@@ -3,12 +3,9 @@ Banner Section
 ================================*/
 
 .banner-sec {
+  background: url("../assets/home/banner-bg-img.jpg") no-repeat center/cover;
   padding: 350px 0 100px;
-  min-height: 100vh;
-  position: relative;
-  background: url("../assets/home/banner-bg-1.jpg") no-repeat center/cover;
 }
-
 .banner-content {
   text-align: center;
 }
@@ -394,8 +391,7 @@ Years Of Shaping Section
   position: absolute;
   bottom: 195px;
   left: -36px;
-  background: url("../assets/common/rotating-design.png")
-    no-repeat center/cover;
+  background: url("../assets/common/rotating-design.png") no-repeat center/cover;
   width: 384px;
   height: 384px;
   animation: rotate-360deg-20sec 20s linear infinite;
@@ -1364,8 +1360,7 @@ Latest News - Signup Wrapper
   position: absolute;
   top: 45%;
   right: -150px;
-  background: url("../assets/common/rotating-design.png")
-    no-repeat center/cover;
+  background: url("../assets/common/rotating-design.png") no-repeat center/cover;
   width: 384px;
   height: 384px;
   animation: rotate-360deg-20sec 20s linear infinite;

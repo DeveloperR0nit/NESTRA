@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NESTRA About US</title>
+    <title>NESTRA Properties</title>
     <link rel="icon" sizes="32x32" href="./assets/common/favion-icon.png" />
     <link rel="icon" sizes="16x16" href="./assets/common/favion-icon.png" />
     <!-- Bootstrap CDN -->
@@ -22,8 +22,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <!-- Common CSS -->
     <link rel="stylesheet" href="./css/common.css" />
-    <!-- About US CSS -->
-    <link rel="stylesheet" href="./css/about-us.css" />
+    <!-- Properties CSS -->
+    <link rel="stylesheet" href="./css/properties.css" />
   </head>
   <body>
     <div class="loader-wrapper" id="loader-wrapper">
@@ -169,24 +169,24 @@
                   </li>
                   <li class="nav-item">
                     <a
-                      class="nav-link active"
+                      class="nav-link"
                       aria-current="page"
                       href="./about-us.html"
-                      >about us</a
+                      ><ul class="nav-link-hover">
+                        <li>about us</li>
+                        <li>about us</li>
+                      </ul></a
                     >
                   </li>
                   <li class="nav-item dropdown">
                     <a
-                      class="nav-link dropdown-toggle d-flex"
+                      class="nav-link dropdown-toggle d-flex active"
                       href="#"
                       role="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                     >
-                      <ul class="nav-link-hover">
-                        <li>properties</li>
-                        <li>properties</li>
-                      </ul>
+                      properties
                       <svg
                         width="13"
                         height="8"
@@ -202,10 +202,9 @@
                       </svg>
                     </a>
                     <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="properties.html"
-                          ><div>luxury appartments</div>
-                          <div>luxury appartments</div></a
+                      <li class="dropdown-active">
+                        <a class="dropdown-item" href="./properties.html"
+                          >luxury appartments</a
                         >
                       </li>
                       <li>
@@ -415,576 +414,1105 @@
     <div id="luxy">
       <section class="banner-sec">
         <div class="container">
-          <div class="title-1">about us</div>
+          <div class="title-1">properties</div>
           <div>
             <ul class="navigation">
               <li class="home"><a href="./index.html"> home </a></li>
-              <li>about us</li>
+              <li class="properties-nav-item"><button>properties</button></li>
+              <li>luxury appartments</li>
             </ul>
           </div>
         </div>
       </section>
-      <div class="welcome-design-wrapper position-relative">
-        <section class="welcome-sec">
-          <div class="container">
-            <div class="row">
-              <div class="col-6 d-none d-md-block">
-                <div class="welcome-card">
-                  <div
-                    class="welcome-left-img"
-                    data-aos="flip-left"
-                    data-aos-delay="50"
-                    data-aos-duration="1000"
+      <section class="properties-list-sec">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-xl-9">
+              <div class="properties-list-top-bar d-flex align-items-center flex-wrap">
+                <h2 class="title-2">Showing 12 of 87 Properties</h2>
+                <form
+                  class="search-box-wrapper d-flex align-items-center d-none d-lg-flex"
+                  action=""
+                  novalidate
+                >
+                  <input
+                    type="search"
+                    name="properties-search"
+                    id="properties-search"
+                    placeholder="Search properties..."
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                  <button type="reset" class="reset-btn reset-btn-1">
+                    <span class="reset-bar bar-1"></span
+                    ><span class="reset-bar bar-2"></span>
+                  </button>
+                  <button class="dropdown-btn">
+                    <svg
+                      width="9"
+                      height="5"
+                      viewBox="0 0 9 5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M4.78125 4.75781C4.54688 4.99219 4.19531 4.99219 3.98438 4.75781L0.234375 1.00781C0 0.796875 0 0.445312 0.234375 0.234375C0.445312 0 0.796875 0 1.00781 0.234375L4.35938 3.58594L7.73438 0.210938C7.94531 0 8.29688 0 8.50781 0.210938C8.74219 0.445312 8.74219 0.796875 8.50781 1.00781L4.78125 4.75781Z"
+                        fill="white"
+                        fill-opacity="0.6"
+                      />
+                    </svg>
+                  </button>
+                </form>
+                <button class="filter-icon filter-icon-1 d-flex align-items-center">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
-                    <img
-                      src="./assets/common/navbar-collapsed-bg-img.png"
-                      alt=""
+                    <path
+                      d="M1.25 1.25V6.25H6.25V1.25H1.25ZM0 0H1.25H6.25H7.5V1.25V6.25V7.5H6.25H1.25H0V6.25V1.25V0ZM1.25 11.25V16.25H6.25V11.25H1.25ZM0 10H1.25H6.25H7.5V11.25V16.25V17.5H6.25H1.25H0V16.25V11.25V10ZM16.25 1.25H11.25V6.25H16.25V1.25ZM11.25 0H16.25H17.5V1.25V6.25V7.5H16.25H11.25H10V6.25V1.25V0H11.25ZM11.25 11.25V16.25H16.25V11.25H11.25ZM10 10H11.25H16.25H17.5V11.25V16.25V17.5H16.25H11.25H10V16.25V11.25V10Z"
+                      fill="white"
+                      fill-opacity="0.6"
                     />
-                  </div>
-                </div>
+                  </svg>
+                </button>
+                <button class="filter-icon filter-icon-2 d-flex align-items-center">
+                  <svg
+                    width="20"
+                    height="19"
+                    viewBox="0 0 20 19"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M8.75 10.8203V11.25V13.8281L11.25 16.0156V11.25V10.8203L11.5234 10.4688L18.75 2.07031V1.25H1.25V2.07031L8.4375 10.4688L8.75 10.8203ZM0 2.5V1.25V0H1.25H18.75H20V1.25V2.5L12.5 11.25V17.1094V18.75L11.25 17.6562L7.5 14.375V11.25L0 2.5Z"
+                      fill="white"
+                      fill-opacity="0.6"
+                    />
+                  </svg>
+                </button>
+                <button class="properties-toggler filter-icon d-flex align-items-center d-xl-none position-relative">
+                  <span></span>
+                </button>
               </div>
-              <div class="col-12 col-md-6">
-                <div class="welcome-card">
-                  <div class="welcome-content">
-                    <div
-                      class="subtitle"
-                      data-aos="fade-up"
-                      data-aos-delay="50"
-                    >
-                      <div class="subtitle-box"></div>
-                      welcome to company
+              <div class="row position-relative">
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                  <div class="card-wrapper position-relative">
+                    <div class="property-type">villa</div>
+                    <div class="card-img">
+                      <img
+                        src="./assets/properties/properties-card-img-1.png"
+                        alt=""
+                      />
                     </div>
-                    <div
-                      class="title-2"
-                      data-aos="fade-up"
-                      data-aos-delay="150"
-                    >
-                      Turning Spaces into Homes, & Dreams into Reality
-                    </div>
-                    <div
-                      class="title-desc"
-                      data-aos="zoom-in-left"
-                      data-aos-delay="250"
-                    >
-                      To redefine the real estate experience through innovation,
-                      integrity, and individuality — helping every customer,
-                      from families to investors, find homes that match their
-                      lifestyle and aspirations.
-                    </div>
-                    <a
-                      href=""
-                      class="primary-btn"
-                      data-aos="zoom-out"
-                      data-aos-delay="350"
-                      data-aos-duration="1000"
-                    >
-                      <div class="text">
-                        <ul>
-                          <li>know more</li>
-                          <li>know more</li>
-                        </ul>
+                    <div class="card-content">
+                      <h6 class="place-name">Kolkata | New Town</h6>
+                      <div class="appartment-details">
+                        Skyline Heights - 3BHK Apartment
                       </div>
-                      <div class="icon-box">
-                        <svg
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="primary-first-svg"
-                        >
-                          <path
-                            d="M14.2769 0C14.6762 1.56731e-08 14.9998 0.323846 15 0.723022V13.1422C15 13.5415 14.6763 13.8652 14.2769 13.8652C13.8778 13.865 13.5539 13.5413 13.5539 13.1422V9.97897L13.5341 7.40462C13.5205 5.65548 11.4683 4.76323 10.1822 5.87314L10.0608 5.98682L10.0587 5.98894L1.23376 14.7888C0.951113 15.0706 0.49332 15.0705 0.211316 14.7881C-0.0705862 14.5054 -0.0705262 14.0469 0.212022 13.765L9.03482 4.96654C10.324 3.67037 9.41119 1.46276 7.58306 1.45593L4.95988 1.44675L4.95917 1.44604H1.85796C1.45862 1.44604 1.1349 1.12234 1.1349 0.723022C1.13506 0.323845 1.45872 -7.83653e-08 1.85796 0H14.2769Z"
-                            fill="black"
-                          />
-                        </svg>
-                        <svg
-                          width="15"
-                          height="15"
-                          viewBox="0 0 15 15"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                          class="primary-second-svg"
-                        >
-                          <path
-                            d="M14.2769 0C14.6762 1.56731e-08 14.9998 0.323846 15 0.723022V13.1422C15 13.5415 14.6763 13.8652 14.2769 13.8652C13.8778 13.865 13.5539 13.5413 13.5539 13.1422V9.97897L13.5341 7.40462C13.5205 5.65548 11.4683 4.76323 10.1822 5.87314L10.0608 5.98682L10.0587 5.98894L1.23376 14.7888C0.951113 15.0706 0.49332 15.0705 0.211316 14.7881C-0.0705862 14.5054 -0.0705262 14.0469 0.212022 13.765L9.03482 4.96654C10.324 3.67037 9.41119 1.46276 7.58306 1.45593L4.95988 1.44675L4.95917 1.44604H1.85796C1.45862 1.44604 1.1349 1.12234 1.1349 0.723022C1.13506 0.323845 1.45872 -7.83653e-08 1.85796 0H14.2769Z"
-                            fill="black"
-                          />
-                        </svg>
-                      </div>
-                    </a>
-                  </div>
-                  <div class="welcome-swiper-wrapper">
-                    <!-- Swiper -->
-                    <div
-                      class="swiper mySwiper1"
-                      data-aos="zoom-in-left"
-                      data-aos-delay="450"
-                      data-aos-duration="1000"
-                    >
-                      <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                          <img
-                            src="./assets/about-us/welcome-slider-img-1.png"
-                            alt=""
-                          />
-                        </div>
-                        <div class="swiper-slide">
-                          <img
-                            src="./assets/about-us/welcome-slider-img-2.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div class="swiper-slide">
-                          <img
-                            src="./assets/about-us/welcome-slider-img-3.jpg"
-                            alt=""
-                          />
-                        </div>
-                      </div>
+                      <p class="title-desc">
+                        Spacious apartment with balcony, modular kitchen & easy
+                        metro access.
+                      </p>
+                      <div class="price">₹ 82.5 L</div>
+                      <a href="" class="card-btn">
+                        <span> View Details </span>
+                      </a>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="design-sec">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-8">
-                <div class="subtitle" data-aos="fade-up" data-aos-delay="50">
-                  <div class="subtitle-box"></div>
-                  design your legacy
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                  <div class="card-wrapper position-relative">
+                    <div class="property-type">villa</div>
+                    <div class="card-img">
+                      <img
+                        src="./assets/properties/properties-card-img-2.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-content">
+                      <h6 class="place-name">Bengaluru | Whitefield</h6>
+                      <div class="appartment-details">
+                        Palm Grove Villas - 4BHK Villa
+                      </div>
+                      <p class="title-desc">
+                        Independent villa with private garden, club access &
+                        smart home features.
+                      </p>
+                      <div class="price">₹ 2.3 Cr</div>
+                      <a href="" class="card-btn">
+                        <span> View Details </span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div class="title-2" data-aos="fade-up" data-aos-delay="150">
-                  Experience Living, Redefined by Excellence
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                  <div class="card-wrapper position-relative">
+                    <div class="property-type">flat</div>
+                    <div class="card-img">
+                      <img
+                        src="./assets/properties/properties-card-img-3.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-content">
+                      <h6 class="place-name">Pune | Hinjawadi</h6>
+                      <div class="appartment-details">
+                        Bliss Residency - 2BHK Flat
+                      </div>
+                      <p class="title-desc">
+                        Perfect for young families, close to IT parks & schools.
+                      </p>
+                      <div class="price">₹ 65 L</div>
+                      <a href="" class="card-btn">
+                        <span> View Details </span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <a
-                  href=""
-                  class="primary-btn"
-                  data-aos="zoom-out"
-                  data-aos-delay="250"
-                  data-aos-duration="1000"
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                  <div class="card-wrapper position-relative">
+                    <div class="property-type">penthouse</div>
+                    <div class="card-img">
+                      <img
+                        src="./assets/properties/properties-card-img-4.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-content">
+                      <h6 class="place-name">Hyderabad | Gachibowli</h6>
+                      <div class="appartment-details">
+                        Elite Residency - 4BHK Penthouse
+                      </div>
+                      <p class="title-desc">
+                        Top-floor luxury penthouse with panoramic city views
+                        private terrace.
+                      </p>
+                      <div class="price">₹ 2.8 Cr</div>
+                      <a href="" class="card-btn">
+                        <span> View Details </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                  <div class="card-wrapper position-relative">
+                    <div class="property-type">appartment</div>
+                    <div class="card-img">
+                      <img
+                        src="./assets/properties/properties-card-img-5.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-content">
+                      <h6 class="place-name">Kolkata | Alipore</h6>
+                      <div class="appartment-details">
+                        Royal Crest - 4BHK Luxury Apartment
+                      </div>
+                      <p class="title-desc">
+                        Ultra-premium apartment with skyline views, private
+                        lift, and concierge service.
+                      </p>
+                      <div class="price">₹ 3.8 Cr</div>
+                      <a href="" class="card-btn">
+                        <span> View Details </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                  <div class="card-wrapper position-relative">
+                    <div class="property-type">smart home</div>
+                    <div class="card-img">
+                      <img
+                        src="./assets/properties/properties-card-img-6.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-content">
+                      <h6 class="place-name">Delhi NCR | Gurugram</h6>
+                      <div class="appartment-details">
+                        Urban Nest - 2BHK Smart Home
+                      </div>
+                      <p class="title-desc">
+                        Fully automated apartment with IoT-enabled lighting &
+                        climate control.
+                      </p>
+                      <div class="price">₹ 95 L</div>
+                      <a href="" class="card-btn">
+                        <span> View Details </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                  <div class="card-wrapper position-relative">
+                    <div class="property-type">duplex</div>
+                    <div class="card-img">
+                      <img
+                        src="./assets/properties/properties-card-img-7.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-content">
+                      <h6 class="place-name">Jaipur | Vaishali Nagar</h6>
+                      <div class="appartment-details">
+                        PinkCity Homes - 3BHK Duplex
+                      </div>
+                      <p class="title-desc">
+                        Duplex home with premium wooden interiors & dedicated
+                        parking.
+                      </p>
+                      <div class="price">₹ 1.15 Cr</div>
+                      <a href="" class="card-btn">
+                        <span> View Details </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                  <div class="card-wrapper position-relative">
+                    <div class="property-type">row house</div>
+                    <div class="card-img">
+                      <img
+                        src="./assets/properties/properties-card-img-8.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-content">
+                      <h6 class="place-name">Ahmedabad | SG Highway</h6>
+                      <div class="appartment-details">
+                        Heritage Greens - 4BHK Row House
+                      </div>
+                      <p class="title-desc">
+                        Spacious row house with garden-facing balcony &
+                        vastu-compliant design.
+                      </p>
+                      <div class="price">₹ 1.9 Cr</div>
+                      <a href="" class="card-btn">
+                        <span> View Details </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4">
+                  <div class="card-wrapper position-relative">
+                    <div class="property-type">apartment</div>
+                    <div class="card-img">
+                      <img
+                        src="./assets/properties/properties-card-img-9.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-content">
+                      <h6 class="place-name">Noida | Sector 150</h6>
+                      <div class="appartment-details">
+                        Green Arch - 3BHK Apartment
+                      </div>
+                      <p class="title-desc">
+                        Eco-friendly apartment with solar-powered amenities &
+                        clubhouse access.
+                      </p>
+                      <div class="price">₹ 1.35 Cr</div>
+                      <a href="" class="card-btn">
+                        <span> View Details </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                  <div class="card-wrapper position-relative">
+                    <div class="property-type">villa</div>
+                    <div class="card-img">
+                      <img
+                        src="./assets/properties/properties-card-img-10.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-content">
+                      <h6 class="place-name">Lucknow | Gomti Nagar</h6>
+                      <div class="appartment-details">
+                        Royal Residency - 4BHK Villa
+                      </div>
+                      <p class="title-desc">
+                        Premium villa with private driveway, terrace garden &
+                        servant quarters.
+                      </p>
+                      <div class="price">₹ 1.8 Cr</div>
+                      <a href="" class="card-btn">
+                        <span> View Details </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 mb-4 mb-md-0">
+                  <div class="card-wrapper position-relative">
+                    <div class="property-type">apartment</div>
+                    <div class="card-img">
+                      <img
+                        src="./assets/properties/properties-card-img-11.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-content">
+                      <h6 class="place-name">Kolkata | Salt Lake Sector V</h6>
+                      <div class="appartment-details">
+                        Metro View Heights - 2BHK Apartment
+                      </div>
+                      <p class="title-desc">
+                        Modern apartment with metro connectivity, rooftop
+                        garden, and gym access.
+                      </p>
+                      <div class="price">₹ 68 L</div>
+                      <a href="" class="card-btn">
+                        <span> View Details </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <div class="card-wrapper position-relative">
+                    <div class="property-type">waterfront apartment</div>
+                    <div class="card-img">
+                      <img
+                        src="./assets/properties/properties-card-img-12.png"
+                        alt=""
+                      />
+                    </div>
+                    <div class="card-content">
+                      <h6 class="place-name">Kochi | Marine Drive</h6>
+                      <div class="appartment-details">
+                        Blue Horizon - Waterfront Apartment
+                      </div>
+                      <p class="title-desc">
+                        Luxury apartment overlooking the backwaters, with
+                        infinity pool & gym.
+                      </p>
+                      <div class="price">₹ 2.4 Cr</div>
+                      <a href="" class="card-btn">
+                        <span> View Details </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="properties-menu-sm position-absolute d-xl-none end-0 z-3">
+                  <div class="search-part col-3-part">
+                <h4>search</h4>
+                <form
+                  class="search-box-wrapper d-flex align-items-center search-box-wrapper-sm"
+                  action=""
+                  novalidate
                 >
-                  <div class="text">
-                    <ul>
-                      <li>view collections</li>
-                      <li>view collections</li>
-                    </ul>
-                  </div>
-                  <div class="icon-box">
+                  <input
+                    type="search"
+                    name="properties-search"
+                    id="properties-search"
+                    placeholder="Search properties..."
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                  <button type="reset" class="reset-btn reset-btn-1">
+                    <span class="reset-bar bar-1"></span
+                    ><span class="reset-bar bar-2"></span>
+                  </button>
+                  <button class="dropdown-btn">
                     <svg
                       width="15"
                       height="15"
                       viewBox="0 0 15 15"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      class="primary-first-svg"
                     >
                       <path
-                        d="M14.2769 0C14.6762 1.56731e-08 14.9998 0.323846 15 0.723022V13.1422C15 13.5415 14.6763 13.8652 14.2769 13.8652C13.8778 13.865 13.5539 13.5413 13.5539 13.1422V9.97897L13.5341 7.40462C13.5205 5.65548 11.4683 4.76323 10.1822 5.87314L10.0608 5.98682L10.0587 5.98894L1.23376 14.7888C0.951113 15.0706 0.49332 15.0705 0.211316 14.7881C-0.0705862 14.5054 -0.0705262 14.0469 0.212022 13.765L9.03482 4.96654C10.324 3.67037 9.41119 1.46276 7.58306 1.45593L4.95988 1.44675L4.95917 1.44604H1.85796C1.45862 1.44604 1.1349 1.12234 1.1349 0.723022C1.13506 0.323845 1.45872 -7.83653e-08 1.85796 0H14.2769Z"
-                        fill="black"
+                        d="M10.7812 6.09375C10.7812 4.42383 9.87305 2.90039 8.4375 2.05078C6.97266 1.20117 5.18555 1.20117 3.75 2.05078C2.28516 2.90039 1.40625 4.42383 1.40625 6.09375C1.40625 7.79297 2.28516 9.31641 3.75 10.166C5.18555 11.0156 6.97266 11.0156 8.4375 10.166C9.87305 9.31641 10.7812 7.79297 10.7812 6.09375ZM9.87305 10.8984C8.81836 11.7188 7.5 12.1875 6.09375 12.1875C2.72461 12.1875 0 9.46289 0 6.09375C0 2.75391 2.72461 0 6.09375 0C9.43359 0 12.1875 2.75391 12.1875 6.09375C12.1875 7.5293 11.6895 8.84766 10.8691 9.90234L14.502 13.5352L15 14.0332L14.0039 15L13.5059 14.502L9.87305 10.8691V10.8984Z"
+                        fill="white"
+                        fill-opacity="0.5"
                       />
                     </svg>
+                  </button>
+                </form>
+              </div>
+              <div class="property-type-part col-3-part">
+                <h4>property type:</h4>
+                <ul class="properties-list">
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        Apartments
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        villas
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        flats
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        penthouses
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        smart homes
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        duplexes
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        row houses
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        waterfront Apartments
+                      </div>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="price-range-part col-3-part">
+                <h4>
+                  price range
+                </h4>
+                <input type="range" name="price-range" id="price-range2" min="20" max="500" value="60" step="2">
+                <div class="price-display d-flex">
+                  <div class="me-1">Price: </div>
+                  <div id="price-value2">20 L - 60 L</div>
+                  <button class="filter-btn">filter</button>
+                </div>
+              </div>
+              <div class="price-status-part col-3-part">
+                <h4>
+                  property status
+                </h4>
+                <div class="property-status-card">
+                  <div class="property-img">
+                    <img src="./assets/properties/properties-card-img-7.png" alt="">
+                  </div>
+                  <div class="property-status-content">
+                    <div class="property-status">
+                      for sale
+                    </div>
+                    <div class="property-price">
+                      ₹ 1.15 Cr
+                    </div>
+                  </div>
+                </div>
+                <div class="property-status-card">
+                  <div class="property-img">
+                    <img src="./assets/properties/properties-card-img-4.png" alt="">
+                  </div>
+                  <div class="property-status-content">
+                    <div class="property-status">
+                      for rent
+                    </div>
+                    <div class="property-price">
+                      ₹ 50 L
+                    </div>
+                  </div>
+                </div>
+                <div class="property-status-card">
+                  <div class="property-img">
+                    <img src="./assets/properties/property-status-img-3.png" alt="">
+                  </div>
+                  <div class="property-status-content">
+                    <div class="property-status">
+                      new launch
+                    </div>
+                    <div class="property-price">
+                      ₹ 3.5 Cr
+                    </div>
+                  </div>
+                </div>
+                <div class="property-status-card mb-0">
+                  <div class="property-img">
+                    <img src="./assets/properties/properties-card-img-11.png" alt="">
+                  </div>
+                  <div class="property-status-content">
+                    <div class="property-status">
+                      ready to move
+                    </div>
+                    <div class="property-price">
+                      ₹ 68 L
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              <div class="filter-location col-3-part">
+                <h4>
+                  filter by location
+                </h4>
+                <ul class="location-list">
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox101" hidden>
+                    <label for="checkbox101" class="location-box"></label>
+                    <label for="checkbox101" class="location-name">delhi</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox102" hidden>
+                    <label for="checkbox102" class="location-box"></label>
+                    <label for="checkbox102" class="location-name">west bengal</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox103" hidden>
+                    <label for="checkbox103" class="location-box"></label>
+                    <label for="checkbox103" class="location-name">gujrat</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox104" hidden>
+                    <label for="checkbox104" class="location-box"></label>
+                    <label for="checkbox104" class="location-name">kerala</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox105" hidden>
+                    <label for="checkbox105" class="location-box"></label>
+                    <label for="checkbox105" class="location-name">arunachal pradesh</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox106" hidden>
+                    <label for="checkbox106" class="location-box"></label>
+                    <label for="checkbox106" class="location-name">mumbai</label>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div class="filter-aminities col-3-part">
+                <h4>
+                  filter by aminities
+                </h4>
+                <ul class="aminities-list">
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox107" hidden>
+                    <label for="checkbox107" class="aminities-box"></label>
+                    <label for="checkbox107" class="aminities-name">swimming pool</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox108" hidden>
+                    <label for="checkbox108" class="aminities-box"></label>
+                    <label for="checkbox108" class="aminities-name">gym</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox109" hidden>
+                    <label for="checkbox109" class="aminities-box"></label>
+                    <label for="checkbox109" class="aminities-name">garden</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox110" hidden>
+                    <label for="checkbox110" class="aminities-box"></label>
+                    <label for="checkbox110" class="aminities-name">parking</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox111" hidden>
+                    <label for="checkbox111" class="aminities-box"></label>
+                    <label for="checkbox111" class="aminities-name">24x7 security</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox112" hidden>
+                    <label for="checkbox112" class="aminities-box"></label>
+                    <label for="checkbox112" class="aminities-name">Eco-Friendly</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox113" hidden>
+                    <label for="checkbox113" class="aminities-box"></label>
+                    <label for="checkbox113" class="aminities-name">designer interiors</label>
+                  </li>
+                  
+                </ul>
+              </div>
+                </div>
+              </div>
+              <div class="page-btns">
+                <button class="page-prev-btn"> << Prev </button>
+                <button class="page-btn">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn">5</button>
+                <button class="page-next-btn">Next >></button>
+              </div>
+            </div>
+            <div class="col-3 d-none d-xl-block">
+              <div class="search-part col-3-part">
+                <h4>search</h4>
+                <form
+                  class="search-box-wrapper d-flex align-items-center search-box-wrapper-sm"
+                  action=""
+                  novalidate
+                >
+                  <input
+                    type="search"
+                    name="properties-search"
+                    id="properties-search"
+                    placeholder="Search properties..."
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                  <button type="reset" class="reset-btn reset-btn-1">
+                    <span class="reset-bar bar-1"></span
+                    ><span class="reset-bar bar-2"></span>
+                  </button>
+                  <button class="dropdown-btn">
                     <svg
                       width="15"
                       height="15"
                       viewBox="0 0 15 15"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
-                      class="primary-second-svg"
                     >
                       <path
-                        d="M14.2769 0C14.6762 1.56731e-08 14.9998 0.323846 15 0.723022V13.1422C15 13.5415 14.6763 13.8652 14.2769 13.8652C13.8778 13.865 13.5539 13.5413 13.5539 13.1422V9.97897L13.5341 7.40462C13.5205 5.65548 11.4683 4.76323 10.1822 5.87314L10.0608 5.98682L10.0587 5.98894L1.23376 14.7888C0.951113 15.0706 0.49332 15.0705 0.211316 14.7881C-0.0705862 14.5054 -0.0705262 14.0469 0.212022 13.765L9.03482 4.96654C10.324 3.67037 9.41119 1.46276 7.58306 1.45593L4.95988 1.44675L4.95917 1.44604H1.85796C1.45862 1.44604 1.1349 1.12234 1.1349 0.723022C1.13506 0.323845 1.45872 -7.83653e-08 1.85796 0H14.2769Z"
-                        fill="black"
+                        d="M10.7812 6.09375C10.7812 4.42383 9.87305 2.90039 8.4375 2.05078C6.97266 1.20117 5.18555 1.20117 3.75 2.05078C2.28516 2.90039 1.40625 4.42383 1.40625 6.09375C1.40625 7.79297 2.28516 9.31641 3.75 10.166C5.18555 11.0156 6.97266 11.0156 8.4375 10.166C9.87305 9.31641 10.7812 7.79297 10.7812 6.09375ZM9.87305 10.8984C8.81836 11.7188 7.5 12.1875 6.09375 12.1875C2.72461 12.1875 0 9.46289 0 6.09375C0 2.75391 2.72461 0 6.09375 0C9.43359 0 12.1875 2.75391 12.1875 6.09375C12.1875 7.5293 11.6895 8.84766 10.8691 9.90234L14.502 13.5352L15 14.0332L14.0039 15L13.5059 14.502L9.87305 10.8691V10.8984Z"
+                        fill="white"
+                        fill-opacity="0.5"
                       />
                     </svg>
-                  </div>
-                </a>
-                <div class="row">
-                  <div class="col-12 col-sm-6 mb-5 mb-sm-0">
-                    <div
-                      class="col-8-img-card"
-                      data-aos="fade-right"
-                      data-aos-delay="350"
-                      data-aos-duration="1000"
-                    >
-                      <img
-                        src="./assets/about-us/design-col-8-img-1.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="col-12 col-sm-6">
-                    <div
-                      class="col-8-img-card"
-                      data-aos="fade-left"
-                      data-aos-delay="350"
-                      data-aos-duration="1000"
-                    >
-                      <img
-                        src="./assets/about-us/design-col-8-img-2.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                </div>
+                  </button>
+                </form>
               </div>
-              <div class="col-12 col-md-4">
-                <div
-                  class="col-4-img d-none d-md-block"
-                  data-aos="flip-left"
-                  data-aos-delay="250"
-                  data-aos-duration="1000"
-                >
-                  <img src="./assets/about-us/design-col-4-img.png" alt="" />
-                </div>
-                <div
-                  class="title-desc mt-5 mt-md-0"
-                  data-aos="zoom-in-left"
-                  data-aos-delay="350"
-                  data-aos-offset="50"
-                >
-                  From contemporary architecture to world-class amenities, our
-                  developments embody refined living and timeless elegance.
-                </div>
+              <div class="property-type-part col-3-part">
+                <h4>property type:</h4>
+                <ul class="properties-list">
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        Apartments
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        villas
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        flats
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        penthouses
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        smart homes
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        duplexes
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        row houses
+                      </div>
+                    </button>
+                  </li>
+                  <li>
+                    <button class="property-type">
+                      <svg
+                        width="13"
+                        height="8"
+                        viewBox="0 0 13 8"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M12.3536 4.03568C12.5488 3.84042 12.5488 3.52384 12.3536 3.32858L9.17157 0.146595C8.97631 -0.0486672 8.65973 -0.0486672 8.46447 0.146595C8.2692 0.341857 8.2692 0.65844 8.46447 0.853702L11.2929 3.68213L8.46447 6.51056C8.2692 6.70582 8.2692 7.0224 8.46447 7.21766C8.65973 7.41293 8.97631 7.41293 9.17157 7.21766L12.3536 4.03568ZM0 3.68213V4.18213H12V3.68213V3.18213H0V3.68213Z"
+                          fill="white"
+                          fill-opacity="0.7"
+                        />
+                      </svg>
+                      <div>
+                        waterfront Apartments
+                      </div>
+                    </button>
+                  </li>
+                </ul>
               </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <section class="scroll-text-sec">
-        <div class="scroll-text">
-          <div class="scroll-content">
-            <svg
-              width="120"
-              height="120"
-              viewBox="0 0 132 132"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M77 0V39.1096L104.72 11.6875L120.29 27.2296L92.8125 54.8946H132V76.8487H92.8125L120.29 104.514L104.72 120.051L77 92.6337V131.743H55V92.6337L27.28 120.051L11.7104 104.766L39.1875 76.8487H0V54.8946H39.1875L11.7104 27.2296L27.28 11.6875L55 39.1096V0H77Z"
-                fill="#F6C557"
-              />
-            </svg>
-            <div class="title-1">Homes built for life</div>
-          </div>
-          <div class="scroll-content">
-            <svg
-              width="120"
-              height="120"
-              viewBox="0 0 132 132"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M77 0V39.1096L104.72 11.6875L120.29 27.2296L92.8125 54.8946H132V76.8487H92.8125L120.29 104.514L104.72 120.051L77 92.6337V131.743H55V92.6337L27.28 120.051L11.7104 104.766L39.1875 76.8487H0V54.8946H39.1875L11.7104 27.2296L27.28 11.6875L55 39.1096V0H77Z"
-                fill="#F6C557"
-              />
-            </svg>
-            <div class="title-1">Homes built for life</div>
-          </div>
-          <div class="scroll-content">
-            <svg
-              width="120"
-              height="120"
-              viewBox="0 0 132 132"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M77 0V39.1096L104.72 11.6875L120.29 27.2296L92.8125 54.8946H132V76.8487H92.8125L120.29 104.514L104.72 120.051L77 92.6337V131.743H55V92.6337L27.28 120.051L11.7104 104.766L39.1875 76.8487H0V54.8946H39.1875L11.7104 27.2296L27.28 11.6875L55 39.1096V0H77Z"
-                fill="#F6C557"
-              />
-            </svg>
-            <div class="title-1">Homes built for life</div>
-          </div>
-          <div class="scroll-content">
-            <svg
-              width="120"
-              height="120"
-              viewBox="0 0 132 132"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M77 0V39.1096L104.72 11.6875L120.29 27.2296L92.8125 54.8946H132V76.8487H92.8125L120.29 104.514L104.72 120.051L77 92.6337V131.743H55V92.6337L27.28 120.051L11.7104 104.766L39.1875 76.8487H0V54.8946H39.1875L11.7104 27.2296L27.28 11.6875L55 39.1096V0H77Z"
-                fill="#F6C557"
-              />
-            </svg>
-            <div class="title-1">Homes built for life</div>
-          </div>
-        </div>
-      </section>
-      <section class="inspired-sec">
-        <div class="container">
-          <div class="subtitle" data-aos="fade-up" data-aos-delay="50">
-            <div class="subtitle-box"></div>
-            design your legacy
-          </div>
-          <div class="title-2" data-aos="fade-up" data-aos-delay="150">
-            Inspired Thinking. Timeless Living.
-          </div>
-          <div class="row justify-content-center">
-            <div class="col-6 col-sm-4 col-lg-3">
-              <div class="inspired-card">
-                <div
-                  class="card-img"
-                  data-aos="flip-right"
-                  data-aos-delay="250"
-                  data-aos-duration="1000"
-                >
-                  <img src="./assets/about-us/inspired-card-1-img.png" alt="" />
-                </div>
-                <h4
-                  class="person-name"
-                  data-aos="fade-right"
-                  data-aos-delay="450"
-                  data-aos-offset="50"
-                >
-                  John Portman
+              <div class="price-range-part col-3-part">
+                <h4>
+                  price range
                 </h4>
-                <h6
-                  class="person-post"
-                  data-aos="fade-right"
-                  data-aos-delay="550"
-                  data-aos-offset="50"
-                >
-                  Designer
-                </h6>
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-3">
-              <div class="inspired-card">
-                <div
-                  class="card-img"
-                  data-aos="fade-right"
-                  data-aos-delay="250"
-                  data-aos-duration="1000"
-                >
-                  <img src="./assets/about-us/inspired-card-2-img.png" alt="" />
+                <input type="range" name="price-range" id="price-range" min="20" max="500" value="60" step="2">
+                <div class="price-display d-flex">
+                  <div class="me-1">Price: </div>
+                  <div id="price-value">20 L - 60 L</div>
+                  <button class="filter-btn">filter</button>
                 </div>
-                <h4
-                  class="person-name"
-                  data-aos="fade-right"
-                  data-aos-delay="450"
-                  data-aos-offset="50"
-                >
-                  alison clutcher
-                </h4>
-                <h6
-                  class="person-post"
-                  data-aos="fade-right"
-                  data-aos-delay="550"
-                  data-aos-offset="50"
-                >
-                  Photographer
-                </h6>
               </div>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-3 mt-4 mt-sm-0">
-              <div class="inspired-card">
-                <div
-                  class="card-img"
-                  data-aos="fade-left"
-                  data-aos-delay="250"
-                  data-aos-duration="1000"
-                >
-                  <img src="./assets/about-us/inspired-card-3-img.png" alt="" />
-                </div>
-                <h4
-                  class="person-name"
-                  data-aos="fade-right"
-                  data-aos-delay="450"
-                  data-aos-offset="50"
-                >
-                  peter jefferson
+              <div class="price-status-part col-3-part">
+                <h4>
+                  property status
                 </h4>
-                <h6
-                  class="person-post"
-                  data-aos="fade-right"
-                  data-aos-delay="550"
-                  data-aos-offset="50"
-                >
-                  project manager
-                </h6>
-              </div>
-            </div>
-            <div class="col-6 col-sm-4 col-lg-3 mt-4 mt-lg-0">
-              <div class="inspired-card">
-                <div
-                  class="card-img"
-                  data-aos="flip-left"
-                  data-aos-delay="250"
-                  data-aos-duration="1000"
-                >
-                  <img src="./assets/about-us/inspired-card-4-img.png" alt="" />
-                </div>
-                <h4
-                  class="person-name"
-                  data-aos="fade-right"
-                  data-aos-delay="450"
-                  data-aos-offset="50"
-                >
-                  julie crawford
-                </h4>
-                <h6
-                  class="person-post"
-                  data-aos="fade-right"
-                  data-aos-delay="550"
-                  data-aos-offset="50"
-                >
-                  architect
-                </h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section
-        class="image-sec"
-        data-aos="fade-up"
-        data-aos-delay="500"
-        data-aos-duration="1000"
-        id="scene"
-        data-relative-input="true"
-      >
-        <div class="image-wrapper" data-depth="0.45">
-          <img src="./assets/about-us/image-sec-bg-img.png" alt="" />
-        </div>
-      </section>
-      <section class="our-clients-sec position-relative">
-        <div class="container">
-          <div class="subtitle" data-aos="fade-up" data-aos-delay="50">
-            <div class="subtitle-box"></div>
-            welcome to our company
-          </div>
-          <h2 class="title-2" data-aos="fade-up" data-aos-delay="150">
-            Here's what our satisfied clients are saying
-          </h2>
-          <div class="swiper-row">
-            <div
-              class="swiper-button-prev d-none d-sm-flex"
-              data-aos="zoom-out-right"
-              data-aos-delay="250"
-            >
-              <svg
-                width="42"
-                height="8"
-                viewBox="0 0 42 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M41.3536 4.03556C41.5488 3.8403 41.5488 3.52372 41.3536 3.32845L38.1716 0.146473C37.9763 -0.0487893 37.6597 -0.0487893 37.4645 0.146473C37.2692 0.341735 37.2692 0.658318 37.4645 0.85358L40.2929 3.68201L37.4645 6.51043C37.2692 6.7057 37.2692 7.02228 37.4645 7.21754C37.6597 7.4128 37.9763 7.4128 38.1716 7.21754L41.3536 4.03556ZM0 3.68201V4.18201H41V3.68201V3.18201H0V3.68201Z"
-                  fill="#F6C557"
-                />
-              </svg>
-            </div>
-            <!-- Swiper -->
-            <div
-              class="swiper-outer-wrapper"
-              data-aos="zoom-in"
-              data-aos-delay="250"
-            >
-              <div class="swiper mySwiper3">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="title-desc">
-                      Lorem Ipsum is simply dummy text of the printing and
-                      typesetting industry. It has been the industry's standard.
-                    </div>
-                    <div class="card-img">
-                      <img
-                        src="./assets/home/our-clients-card-img-1.png"
-                        alt=""
-                      />
-                    </div>
-                    <h3 class="card-name">Alison Clutcher</h3>
-                    <div class="card-role">Photographer</div>
+                <div class="property-status-card">
+                  <div class="property-img">
+                    <img src="./assets/properties/properties-card-img-7.png" alt="">
                   </div>
-                  <div class="swiper-slide">
-                    <div class="title-desc">
-                      Ronit Saha is a very handsome, young and charming guy who
-                      loves to code and is carrying NESTRA to new heights.
+                  <div class="property-status-content">
+                    <div class="property-status">
+                      for sale
                     </div>
-                    <div class="card-img">
-                      <img
-                        src="./assets/home/our-clients-card-img-2.jpeg"
-                        alt=""
-                      />
+                    <div class="property-price">
+                      ₹ 1.15 Cr
                     </div>
-                    <h3 class="card-name">Ronit Saha</h3>
-                    <div class="card-role">CEO Nestra</div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="title-desc">
-                      Nestra is a Trillion Dollar Company and all thanks to me.
-                      I am the best. Suiiiiiiiiii
-                    </div>
-                    <div class="card-img">
-                      <img
-                        src="./assets/home/our-clients-card-img-3.jpeg"
-                        alt=""
-                      />
-                    </div>
-                    <h3 class="card-name">Mr. Ronit Saha</h3>
-                    <div class="card-role">Owner Nestra</div>
                   </div>
                 </div>
+                <div class="property-status-card">
+                  <div class="property-img">
+                    <img src="./assets/properties/properties-card-img-4.png" alt="">
+                  </div>
+                  <div class="property-status-content">
+                    <div class="property-status">
+                      for rent
+                    </div>
+                    <div class="property-price">
+                      ₹ 50 L
+                    </div>
+                  </div>
+                </div>
+                <div class="property-status-card">
+                  <div class="property-img">
+                    <img src="./assets/properties/property-status-img-3.png" alt="">
+                  </div>
+                  <div class="property-status-content">
+                    <div class="property-status">
+                      new launch
+                    </div>
+                    <div class="property-price">
+                      ₹ 3.5 Cr
+                    </div>
+                  </div>
+                </div>
+                <div class="property-status-card mb-0">
+                  <div class="property-img">
+                    <img src="./assets/properties/properties-card-img-11.png" alt="">
+                  </div>
+                  <div class="property-status-content">
+                    <div class="property-status">
+                      ready to move
+                    </div>
+                    <div class="property-price">
+                      ₹ 68 L
+                    </div>
+                  </div>
+                </div>
+                
               </div>
-            </div>
-            <div
-              class="swiper-button-next d-none d-sm-flex"
-              data-aos="zoom-out-left"
-              data-aos-delay="250"
-            >
-              <svg
-                width="42"
-                height="8"
-                viewBox="0 0 42 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M41.3536 4.03556C41.5488 3.8403 41.5488 3.52372 41.3536 3.32845L38.1716 0.146473C37.9763 -0.0487893 37.6597 -0.0487893 37.4645 0.146473C37.2692 0.341735 37.2692 0.658318 37.4645 0.85358L40.2929 3.68201L37.4645 6.51043C37.2692 6.7057 37.2692 7.02228 37.4645 7.21754C37.6597 7.4128 37.9763 7.4128 38.1716 7.21754L41.3536 4.03556ZM0 3.68201V4.18201H41V3.68201V3.18201H0V3.68201Z"
-                  fill="#F6C557"
-                />
-              </svg>
-            </div>
-          </div>
-          <div
-            class="swiper-btns-sm d-flex d-sm-none gap-5 justify-content-center"
-          >
-            <div class="swiper-button-prev mt-4">
-              <svg
-                width="42"
-                height="8"
-                viewBox="0 0 42 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M41.3536 4.03556C41.5488 3.8403 41.5488 3.52372 41.3536 3.32845L38.1716 0.146473C37.9763 -0.0487893 37.6597 -0.0487893 37.4645 0.146473C37.2692 0.341735 37.2692 0.658318 37.4645 0.85358L40.2929 3.68201L37.4645 6.51043C37.2692 6.7057 37.2692 7.02228 37.4645 7.21754C37.6597 7.4128 37.9763 7.4128 38.1716 7.21754L41.3536 4.03556ZM0 3.68201V4.18201H41V3.68201V3.18201H0V3.68201Z"
-                  fill="#F6C557"
-                />
-              </svg>
-            </div>
-            <div class="swiper-button-next mt-4">
-              <svg
-                width="42"
-                height="8"
-                viewBox="0 0 42 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M41.3536 4.03556C41.5488 3.8403 41.5488 3.52372 41.3536 3.32845L38.1716 0.146473C37.9763 -0.0487893 37.6597 -0.0487893 37.4645 0.146473C37.2692 0.341735 37.2692 0.658318 37.4645 0.85358L40.2929 3.68201L37.4645 6.51043C37.2692 6.7057 37.2692 7.02228 37.4645 7.21754C37.6597 7.4128 37.9763 7.4128 38.1716 7.21754L41.3536 4.03556ZM0 3.68201V4.18201H41V3.68201V3.18201H0V3.68201Z"
-                  fill="#F6C557"
-                />
-              </svg>
+              <div class="filter-location col-3-part">
+                <h4>
+                  filter by location
+                </h4>
+                <ul class="location-list">
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox1" hidden>
+                    <label for="checkbox1" class="location-box"></label>
+                    <label for="checkbox1" class="location-name">delhi</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox2" hidden>
+                    <label for="checkbox2" class="location-box"></label>
+                    <label for="checkbox2" class="location-name">west bengal</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox3" hidden>
+                    <label for="checkbox3" class="location-box"></label>
+                    <label for="checkbox3" class="location-name">gujrat</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox4" hidden>
+                    <label for="checkbox4" class="location-box"></label>
+                    <label for="checkbox4" class="location-name">kerala</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox5" hidden>
+                    <label for="checkbox5" class="location-box"></label>
+                    <label for="checkbox5" class="location-name">arunachal pradesh</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox6" hidden>
+                    <label for="checkbox6" class="location-box"></label>
+                    <label for="checkbox6" class="location-name">mumbai</label>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div class="filter-aminities col-3-part">
+                <h4>
+                  filter by aminities
+                </h4>
+                <ul class="aminities-list">
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox7" hidden>
+                    <label for="checkbox7" class="aminities-box"></label>
+                    <label for="checkbox7" class="aminities-name">swimming pool</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox8" hidden>
+                    <label for="checkbox8" class="aminities-box"></label>
+                    <label for="checkbox8" class="aminities-name">gym</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox9" hidden>
+                    <label for="checkbox9" class="aminities-box"></label>
+                    <label for="checkbox9" class="aminities-name">garden</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox10" hidden>
+                    <label for="checkbox10" class="aminities-box"></label>
+                    <label for="checkbox10" class="aminities-name">parking</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox11" hidden>
+                    <label for="checkbox11" class="aminities-box"></label>
+                    <label for="checkbox11" class="aminities-name">24x7 security</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox12" hidden>
+                    <label for="checkbox12" class="aminities-box"></label>
+                    <label for="checkbox12" class="aminities-name">Eco-Friendly</label>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <input type="checkbox" id="checkbox13" hidden>
+                    <label for="checkbox13" class="aminities-box"></label>
+                    <label for="checkbox13" class="aminities-name">designer interiors</label>
+                  </li>
+                  
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -1674,7 +2202,6 @@
       </footer>
     </div>
   </body>
-
   <!-- Bootstrap JS -->
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -1687,10 +2214,8 @@
   <script src="./js/luxy.js" charset="utf-8"></script>
   <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <!-- Parallax JS -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
   <!-- Commmon JS -->
   <script src="./js/common.js"></script>
-  <!-- About Us JS -->
-  <script src="./js/about-us.js"></script>
+  <!-- Properties JS -->
+  <script src="./js/properties.js"></script>
 </html>
