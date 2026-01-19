@@ -1,0 +1,346 @@
+/*==============================
+Banner Section
+================================*/
+
+.banner-sec {
+  background: url("../assets/property-details/banner-bg-img.png") no-repeat
+    center/cover;
+  min-height: 50vh;
+  padding-top: 220px;
+}
+.banner-sec .title-1 {
+  display: none;
+}
+
+/*==============================
+Banner Section Responsive
+================================*/
+
+@media screen and (max-width: 576px) {
+  .banner-sec {
+    padding-top: 200px;
+  }
+  .banner-sec .navigation li::before {
+    left: -14px;
+    top: 14px;
+  }
+  .banner-sec .navigation li {
+    text-align: center;
+  }
+  .banner-sec .navigation button {
+    padding: 0;
+  }
+  .banner-sec .navigation {
+    gap: 30px;
+  }
+}
+
+/*==============================
+Skyline Section
+================================*/
+
+.skyline-sec {
+  padding: 60px 0;
+  position: relative;
+}
+.skyline-sec::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 1350px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.skyline-sec .title-2 {
+  text-transform: capitalize;
+  margin: 10px 0;
+}
+.skyline-sec .apartment-details {
+  font-size: 20px;
+  color: var(--secondary-color);
+}
+.skyline-sec .map-link {
+  color: var(--primary-color);
+  font-size: 12px;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  margin-bottom: 20px;
+}
+.skyline-sec .apartment-info {
+  max-width: 400px;
+  display: flex;
+  margin-top: 60px;
+  flex-wrap: wrap;
+  margin-left: 20px;
+}
+.skyline-sec .apartment-info-card {
+  margin-bottom: 25px;
+  width: fit-content;
+}
+.skyline-sec .apartment-info .apartment-feature {
+  font-size: 20px;
+  margin-top: 15px;
+  color: var(--primary-color);
+}
+.skyline-sec .apartment-info .feature-desc {
+  font-size: 15px;
+  color: var(--text-gray);
+}
+
+/*==============================
+Skyline Section Responsive
+================================*/
+
+@media screen and (max-width: 1200px) {
+  .skyline-sec .title-2 {
+    margin: 30px 0 10px;
+  }
+  .skyline-sec .skyline-img {
+    max-width: 500px;
+    margin: auto;
+  }
+  .skyline-sec .title-desc {
+    max-width: 800px;
+  }
+  .skyline-sec .apartment-info {
+    max-width: 830px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .skyline-sec .skyline-img {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .skyline-sec {
+    padding: 45px 0;
+  }
+  .skyline-sec .apartment-details {
+    font-size: 16px;
+  }
+  .skyline-sec .apartment-info {
+    margin: 60px 0 40px;
+  }
+  .skyline-sec .apartment-info .apartment-feature {
+    font-size: 16px;
+  }
+  .skyline-sec .apartment-info .feature-desc {
+    font-size: 14px;
+  }
+  .skyline-sec .apartment-info {
+    margin: 40px 0 30px;
+  }
+}
+
+/*==============================
+Location Section
+================================*/
+
+.location-sec {
+  padding: 60px 0;
+  position: relative;
+}
+.location-sec::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 1350px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.location-sec .location-top-bar {
+  margin-bottom: 40px;
+}
+.location-title {
+  font-size: 35px;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  margin-bottom: 12px;
+}
+.location-sec .location {
+  font-size: 16px;
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+.location-sec .view-more-btn {
+  font-size: 15px;
+  color: var(--primary-color);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  text-transform: uppercase;
+  transition: 0.6s ease;
+}
+.location-sec .view-more-btn:hover {
+  color: rgba(246, 197, 87, 0.5);
+}
+.location-sec .view-more-btn path {
+  transition: 0.6s ease;
+}
+.location-sec .view-more-btn:hover path {
+  fill: rgba(246, 197, 87, 0.5);
+}
+.location-sec .swiper-slide {
+  width: auto;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.location-sec .swiper-btn {
+  background: transparent;
+  padding: 15px 30px 15px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 20px;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+}
+.location-sec .swiper-btn > svg {
+  margin-right: 10px;
+}
+
+/*==============================
+Location Section Responsive
+================================*/
+
+@media screen and (max-width: 992px) {
+  .location-title {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .location-sec .swiper-btn {
+    font-size: 16px;
+  }
+  .location-title {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .location-sec {
+    padding: 45px 0;
+  }
+  .location-sec .swiper-btn {
+    font-size: 14px;
+  }
+  .location-sec .swiper-btn {
+    padding: 10px 20px 10px 15px;
+  }
+  .location-sec .view-more-btn {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 394px) {
+  .location-sec .view-more-btn {
+    margin-left: 47px;
+  }
+}
+
+/*==============================
+Apartment Features Section
+================================*/
+
+.apartment-features-sec {
+  padding: 60px 0;
+  position: relative;
+}
+.apartment-features-sec::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 1350px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+.apartment-features-sec .location-title {
+  margin-bottom: 30px;
+}
+.apartment-features-list {
+  list-style-type: unset;
+  margin-left: 20px;
+}
+.apartment-features-list > li {
+  color: var(--text-gray);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/*==============================
+Apartment Features Section Responsive
+================================*/
+
+@media screen and (max-width: 576px) {
+  .apartment-features-sec {
+    padding: 45px 0;
+  }
+  .apartment-features-list > li {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+/*==============================
+Lifestyle Aminities Section
+================================*/
+
+.lifestyle-aminities-sec {
+  padding: 60px 0;
+}
+.lifestyle-aminities-sec .location-title {
+  margin-bottom: 30px;
+}
+.lifestyle-aminities-sec .aminities-card {
+  font-size: 20px;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  max-width: 249px;
+  margin: auto;
+}
+.lifestyle-aminities-sec .aminities-card > svg {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/*==============================
+Lifestyle Aminities Section Responsive
+================================*/
+
+@media screen and (max-width: 992px) {
+}
+@media screen and (max-width: 576px) {
+  .lifestyle-aminities-sec {
+    padding: 45px 0;
+  }
+  .lifestyle-aminities-sec .aminities-card {
+    max-width: none;
+  }
+  .lifestyle-aminities-sec .aminities-card {
+    font-size: 17px;
+  }
+}

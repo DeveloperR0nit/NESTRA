@@ -22,7 +22,7 @@ function initLuxy() {
 // AOS
 
 AOS.init({
-  once: true,
+  once: false,
 });
 
 window.addEventListener("load", initLuxy);

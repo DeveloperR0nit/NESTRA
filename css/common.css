@@ -295,10 +295,15 @@ label,
 }
 
 .cursor-border {
-  transition: width 0.2s ease, height 0.2s ease, border-color 0.2s ease;
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    border-color 0.2s ease;
 }
 .cursor {
-  transition: background-color 0.2s ease, mix-blend-mode 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    mix-blend-mode 0.2s ease;
 }
 
 .cursor.hover {
@@ -336,7 +341,9 @@ Loader
   justify-content: center;
   align-items: center;
   z-index: 99999999;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
 }
 .loader {
   position: relative;
@@ -788,7 +795,6 @@ Header-Search Wrapper Responsive
 Header
 ================================*/
 
-
 /*==============================
 Header Top
 ================================*/
@@ -957,13 +963,13 @@ nav .right-box .icon-box::after {
 .active {
   color: var(--secondary-color) !important;
 }
-.dropdown-active > .dropdown-item{
+.dropdown-active > .dropdown-item {
   color: var(--secondary-color) !important;
 }
-.dropdown-active::before{
+.dropdown-active::before {
   display: none;
 }
-.dropdown-active::after{
+.dropdown-active::after {
   opacity: 1 !important;
   width: 100% !important;
 }
@@ -1465,7 +1471,6 @@ Search Box Popup Responsive
 @media screen and (max-width: 992px) {
   .search-box-popup {
     padding: 60px 0 65px;
-    transform: translateY(calc(100vh - 124px));
   }
   .search-box-popup #search-inp {
     font-size: 22px;
@@ -1483,15 +1488,9 @@ Search Box Popup Responsive
     transform: translateY(22px);
   }
 }
-@media screen and (max-width: 768px) {
-  .search-box-popup {
-    transform: translateY(calc(100vh - 110px));
-  }
-}
 @media screen and (max-width: 576px) {
   .search-box-popup {
     padding: 40px 0 45px;
-    transform: translateY(calc(100vh - 90px));
   }
   .search-box-popup #search-inp {
     font-size: 18px;
@@ -1510,12 +1509,11 @@ Search Box Popup Responsive
   }
 }
 
-
 /*==============================
 Banner Section
 ================================*/
 
-.banner-sec{
+.banner-sec {
   min-height: 100vh;
   padding-top: 350px;
 }
@@ -1543,7 +1541,7 @@ Banner Section
 .banner-sec .navigation li:first-child:before {
   display: none;
 }
-.banner-sec .navigation button{
+.banner-sec .navigation button {
   background: transparent;
   border: none;
   color: var(--secondary-color);
@@ -1562,7 +1560,6 @@ Banner Section
     font-size: 18px;
   }
 }
-
 
 /*==============================
 Scroll text Section
