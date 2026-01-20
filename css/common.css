@@ -60,7 +60,7 @@ a {
   color: black;
 }
 a:focus {
-  color: var(--primary-color) !important;
+  color: inherit;
 }
 img {
   height: 100%;
@@ -979,8 +979,8 @@ nav .right-box .icon-box::after {
   width: 100% !important;
 }
 .nav-item:has(.active)::after {
-  opacity: 1;
-  width: 100%;
+  opacity: 1 !important;
+  width: 100% !important;
 }
 .nav-item:hover::after {
   opacity: 1;
@@ -1031,7 +1031,7 @@ nav .dropdown-toggle::after {
   display: none;
 }
 nav .dropdown-toggle:focus {
-  color: var(--secondary-color) !important;
+  color: inherit;
 }
 nav .dropdown-toggle svg {
   margin-left: 5px;
@@ -1205,7 +1205,7 @@ Navbar Responsive
     height: 30px;
   }
   .nav-link.dropdown-toggle {
-    color: var(--primary-color) !important;
+    color: var(--primary-color);
   }
   .nav-item:not(.nav-item.dropdown):hover .nav-link-hover {
     transform: translateY(-30px);
@@ -1214,7 +1214,7 @@ Navbar Responsive
     transform: translateY(0);
   }
   .nav-item.dropdown:hover .nav-link {
-    color: inherit;
+    color: var(--primary-color);
   }
   .nav-item.dropdown:hover svg > path {
     fill: white;
