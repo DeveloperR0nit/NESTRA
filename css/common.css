@@ -299,8 +299,8 @@ label,
     height 0.2s ease,
     border-color 0.2s ease;
 }
-.cursor-border:after{
-  content: '';
+.cursor-border:after {
+  content: "";
   position: absolute;
   inset: -4px;
   border: 2px solid var(--primary-color);
@@ -1300,7 +1300,8 @@ Navbar Responsive
   .dropdown-menu {
     top: 40px !important;
     left: -40% !important;
-    background: var(--bg-black);
+    background: transparent;
+    backdrop-filter: blur(25px);
   }
   nav .dropdown-toggle svg {
     transform: translateY(0);
