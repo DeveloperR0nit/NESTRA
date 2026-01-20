@@ -30,13 +30,10 @@ Banner Responsive
     top: 14px;
   }
   .banner-sec .navigation li {
-    text-align: center;
+    margin-left: 30px;
   }
   .banner-sec .navigation button {
     padding: 0;
-  }
-  .banner-sec .navigation {
-    gap: 30px;
   }
 }
 

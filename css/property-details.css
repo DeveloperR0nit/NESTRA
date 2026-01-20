@@ -11,11 +11,19 @@ Banner Section
 .banner-sec .title-1 {
   display: none;
 }
+.banner-sec .navigation li {
+  font-size: 30px;
+}
 
 /*==============================
 Banner Section Responsive
 ================================*/
 
+@media screen and (max-width: 768px) {
+  .banner-sec .navigation li {
+    font-size: 25px;
+  }
+}
 @media screen and (max-width: 576px) {
   .banner-sec {
     padding-top: 200px;
@@ -30,8 +38,12 @@ Banner Section Responsive
   .banner-sec .navigation button {
     padding: 0;
   }
-  .banner-sec .navigation {
-    gap: 30px;
+  .banner-sec .navigation li {
+    font-size: 22px;
+    margin-left: 30px;
+  }
+  .banner-sec .navigation li::before {
+    transform: translate(-50%, -25%);
   }
 }
 
@@ -98,6 +110,21 @@ Skyline Section
   font-size: 15px;
   color: var(--text-gray);
 }
+.skyline-sec .design-element-1 {
+  width: 163px;
+  position: absolute;
+  top: 40%;
+  left: 33px;
+  z-index: -1;
+}
+.skyline-sec .design-element-2 {
+  width: 357px;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateX(20%);
+  z-index: -1;
+}
 
 /*==============================
 Skyline Section Responsive
@@ -118,9 +145,24 @@ Skyline Section Responsive
     max-width: 830px;
   }
 }
+@media screen and (max-width: 992px) {
+  .skyline-sec .design-element-2 {
+    width: 250px;
+  }
+  .skyline-sec .design-element-1 {
+    width: 130px;
+  }
+}
 @media screen and (max-width: 768px) {
   .skyline-sec .skyline-img {
     max-width: 400px;
+  }
+  .skyline-sec .design-element-1 {
+    top: 33%;
+    left: 10px;
+  }
+  .skyline-sec .design-element-2 {
+    width: 200px;
   }
 }
 @media screen and (max-width: 576px) {
@@ -141,6 +183,15 @@ Skyline Section Responsive
   }
   .skyline-sec .apartment-info {
     margin: 40px 0 30px;
+  }
+  .skyline-sec .design-element-1 {
+    top: 23%;
+    left: 0px;
+    width: 90px;
+  }
+  .skyline-sec .design-element-2 {
+    width: 150px;
+    top: 43%;
   }
 }
 
@@ -218,6 +269,17 @@ Location Section
   text-transform: capitalize;
   display: flex;
   align-items: center;
+  transition: 0.6s ease;
+}
+.location-sec .swiper-btn path {
+  transition: 0.6s ease;
+}
+.location-sec .swiper-btn:hover {
+  color: var(--bg-black);
+  background: var(--primary-color);
+}
+.location-sec .swiper-btn:hover path {
+  fill: var(--bg-black);
 }
 .location-sec .swiper-btn > svg {
   margin-right: 10px;
@@ -278,6 +340,16 @@ Apartment Features Section
   height: 1px;
   background: rgba(255, 255, 255, 0.2);
 }
+.apartment-features-sec::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  height: 63px;
+  width: 163px;
+  background: url("../assets/common/section-after.png") no-repeat center/cover;
+  right: 0;
+  transform: translateX(-70%);
+}
 .apartment-features-sec .location-title {
   margin-bottom: 30px;
 }
@@ -295,6 +367,18 @@ Apartment Features Section
 Apartment Features Section Responsive
 ================================*/
 
+@media screen and (max-width: 992px) {
+  .apartment-features-sec::before {
+    height: 50px;
+    width: 130px;
+    transform: translateX(-15%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .apartment-features-sec::before {
+    top: 55%;
+  }
+}
 @media screen and (max-width: 576px) {
   .apartment-features-sec {
     padding: 45px 0;
@@ -302,6 +386,11 @@ Apartment Features Section Responsive
   .apartment-features-list > li {
     font-size: 14px;
     margin-bottom: 10px;
+  }
+  .apartment-features-sec::before {
+    height: 35px;
+    width: 90px;
+    right: -25px;
   }
 }
 
@@ -311,6 +400,16 @@ Lifestyle Aminities Section
 
 .lifestyle-aminities-sec {
   padding: 60px 0;
+  position: relative;
+}
+.lifestyle-aminities-sec:before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  height: 63px;
+  width: 163px;
+  background: url("../assets/common/section-after.png") no-repeat center/cover;
+  left: 0;
 }
 .lifestyle-aminities-sec .location-title {
   margin-bottom: 30px;
@@ -331,7 +430,16 @@ Lifestyle Aminities Section
 Lifestyle Aminities Section Responsive
 ================================*/
 
+@media screen and (max-width: 1400px) {
+  .lifestyle-aminities-sec:before {
+    top: 7%;
+  }
+}
 @media screen and (max-width: 992px) {
+  .lifestyle-aminities-sec:before {
+    height: 50px;
+    width: 130px;
+  }
 }
 @media screen and (max-width: 576px) {
   .lifestyle-aminities-sec {
@@ -342,5 +450,10 @@ Lifestyle Aminities Section Responsive
   }
   .lifestyle-aminities-sec .aminities-card {
     font-size: 17px;
+  }
+  .lifestyle-aminities-sec:before {
+    height: 35px;
+    width: 90px;
+    top: 3%;
   }
 }
