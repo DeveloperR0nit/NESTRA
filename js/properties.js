@@ -13,25 +13,6 @@ trigger.addEventListener("click", (e) => {
   dropdownToggle1.classList.toggle("show");
 });
 
-// Properties Search in Col-9
-
-const userSearch = document.querySelector("#properties-search");
-const resetBtn1 = document.querySelector(".reset-btn-1");
-
-userSearch.addEventListener("input", () => {
-  const length = userSearch.value.length;
-  if (length >= 1) {
-    resetBtn1.classList.add("show");
-    console.log(resetBtn1.classList);
-  } else {
-    resetBtn1.classList.remove("show");
-    console.log(resetBtn1.classList);
-  }
-});
-resetBtn1.addEventListener("click", () => {
-  resetBtn1.classList.remove("show");
-});
-
 // Range Bar in Col-3
 
 const priceRange = document.getElementById("price-range");
